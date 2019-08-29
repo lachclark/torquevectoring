@@ -33,16 +33,16 @@ function [theModel] = makeBikeModel(Vxo)
 % U = [Mz
 %      ?]
 
-%default values from thesis, can calibrate to our car as necessary
-Cyr = 21429;
-Cyf = 15714;
-Izz = 120;
-m = 356;
-Lf = 0.873;
-Lr = 0.717;
-Gr = 4.4;
-tr = 0.65;
-Rw = 0.265;
+%acquired values from ts_18(?) CAD
+Cyr = 37987.102;
+Cyf = 33632.623;
+Izz = 110;
+m = 340;
+Lf = 0.55;
+Lr = 0.525;
+Gr = 2.2;
+tr = 0.525;
+Rw = 0.232;
 
 % *for calculating ?T from Mz (assisting yaw moment)
 %  (uncomment Gr, tr, Rw first)
@@ -77,5 +77,6 @@ inputs = {'delta_torque','steer_angle_o'};
 outputs = states;
 
 theModel = ss(A,B,C,D,'StateName', states, 'InputName', inputs, 'OutputName', outputs);
+
 end
 
