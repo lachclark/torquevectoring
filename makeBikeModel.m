@@ -3,7 +3,6 @@ function [theModel] = makeBikeModel(Vxo)
 %MAKEBIKEMODEL returns a state-space model linearised around a certain Vxo
 
 
-
 % the parameters (constants) necessary to descibe the linear state space model
 
 %are:
