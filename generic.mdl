@@ -6,9 +6,108 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.431"
+    ComputedModelVersion    "1.553"
     NumModelReferences	    0
-    NumTestPointedSignals   0
+    NumTestPointedSignals   14
+    TestPointedSignal {
+      SignalName	      "xPos"
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/Read CM Dict6"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "yPos"
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/Read CM Dict7"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "Vehicle Velocity"
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Vhcl.v"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "Yaw Rate Feedback"
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Vhcl.YawRate"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "Reference Yaw Rate"
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      ""
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/Vehicle.v"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "Max Yaw Rate"
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/Multiply1"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      ""
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/Saturation"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      ""
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Propulsion Torque"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      ""
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Steer Angle"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      ""
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Delta Torque command"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "RL_Overlay_Trq"
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Delta Torque Splitter"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "RR_Overlay_Trq"
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Delta Torque Splitter"
+      PortIndex		      2
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "half_deltaT"
+      FullBlockPath	      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Divide"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
     NumProvidedFunctions    0
     NumRequiredFunctions    0
     NumResetEvents	    0
@@ -17,25 +116,7 @@ Model {
     PreCompExecutionDomainType "Unset"
     IsExportFunctionModel   0
     NumParameterArguments   0
-    NumExternalFileReferences 16
-    ExternalFileReference {
-      Reference		      "simulink/Continuous/PID Controller"
-      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/MyPowerTrainXWD/PID Controller "
-      SID		      "2281"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "CarMaker4SL/Read CM Dict"
-      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/MyPowerTrainXWD/Reference Yaw Rate Limiter/Read CM Dict"
-      SID		      "2331"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "CarMaker4SL/Read CM Dict"
-      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/MyPowerTrainXWD/Reference Yaw Rate Limiter/Read CM Dict1"
-      SID		      "2332"
-      Type		      "LIBRARY_BLOCK"
-    }
+    NumExternalFileReferences 28
     ExternalFileReference {
       Reference		      "CarMaker4SL/Read CM Dict"
       Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/Read CM Dict"
@@ -73,9 +154,99 @@ Model {
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
+      Reference		      "CarMaker4SL/Read CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/Read CM Dict6"
+      SID		      "2445"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Read CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/Read CM Dict7"
+      SID		      "2447"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
       Reference		      "CarMaker4SL/Read CM Parameter"
       Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/Read CM Parameter"
       SID		      "2263"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Define CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Define CM Dict"
+      SID		      "2384"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Define CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Define CM Dict1"
+      SID		      "2405"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Define CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Define CM Dict2"
+      SID		      "2441"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Define CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Desired Yaw Rate Generator/Define CM Dict"
+      SID		      "2407"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Define CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Desired Yaw Rate Generator/Define CM Dict1"
+      SID		      "2415"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "simulink/Continuous/PID Controller"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/PID Controller "
+      SID		      "2281"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Define CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/Define CM Dict"
+      SID		      "2417"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Read CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/Read CM Dict"
+      SID		      "2331"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Read CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/Read CM Dict1"
+      SID		      "2332"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Write CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/Write CM Dict"
+      SID		      "2418"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Write CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/Write CM Dict1"
+      SID		      "2406"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Write CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Write CM Dict"
+      SID		      "2385"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
+      Reference		      "CarMaker4SL/Write CM Dict"
+      Path		      "generic/CarMaker/IPG Vehicle/PowerTrain/TV_System/Write CM Dict1"
+      SID		      "2442"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
@@ -120,6 +291,11 @@ Model {
   WebScopes_FoundationPlugin "on"
   NotesPlugin		  "on"
   LogicAnalyzerPlugin	  "on"
+  LogicAnalyzerSignalOrdering "b3b34beb-0ab2-4f45-a78c-7ca6a476c882,0cd2f2d9-65b6-4830-9d4c-f576c3ad1272,2f8bec0a-3b3f"
+  "-450b-8533-f65a30f65411,9e28ed2e-8069-46e5-b740-8c381b22d768,ac22d45c-87a5-41f2-a27a-b322b16b6f29,17366cec-8847-4066"
+  "-babc-11f3e00a4a1e,3dcbc8e3-5c1c-4467-bf7b-6b284c6be74b,944bd71b-2421-478b-a63c-456c4e8fb65d,40d0a7b4-7d7b-429f-bb5e"
+  "-392e2cd8fd24,38546e2b-4c83-42d4-8fe3-d4d64ad6ea49,8dcd1e16-a328-49a4-b575-6553e7c8aec1,b0d6eac1-c948-44d9-92b6-3a59"
+  "0d7e2dbf,c683d26a-c1f1-4e5a-8dcf-b2576a555349,e7300a7b-31f1-4fe9-8279-fc1c39f48b9b"
   SLCCPlugin		  "on"
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
@@ -165,8 +341,8 @@ Model {
 	ViewObjType		"SimulinkSubsys"
 	LoadSaveID		"2239"
 	Extents			[1882.0, 875.0]
-	ZoomFactor		[0.8]
-	Offset			[-2274.4624999999996, -553.1500000000002]
+	ZoomFactor		[1.0]
+	Offset			[-2140.640625, -867.75]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -198,11 +374,11 @@ Model {
   Creator		  "fh"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "101097388"
+  LastModifiedBy	  "100614838"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Sep 06 13:58:07 2019"
-  RTWModifiedTimeStamp	  489679082
-  ModelVersionFormat	  "1.%<AutoIncrement:431>"
+  LastModifiedDate	  "Wed Oct 30 11:26:05 2019"
+  RTWModifiedTimeStamp	  494332400
+  ModelVersionFormat	  "1.%<AutoIncrement:553>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -242,7 +418,7 @@ Model {
   SimulationMode	  "normal"
   VisualizeLoggedSignalsWhenLoggingToFile off
   PauseTimes		  "5"
-  NumberOfSteps		  1
+  NumberOfSteps		  100
   SnapshotBufferSize	  10
   SnapshotInterval	  10
   NumberOfLastSnapshots	  0
@@ -273,6 +449,338 @@ Model {
       PropName		      "logAsSpecifiedByModelsSSIDs_"
     }
   }
+  Object {
+    $PropName		    "InstrumentedSignals"
+    $ObjectID		    8
+    $ClassName		    "Simulink.HMI.InstrumentedSignals"
+    Array {
+      Type		      "Struct"
+      Dimension		      14
+      MATStruct {
+	UUID			"b3b34beb-0ab2-4f45-a78c-7ca6a476c882"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Vhcl.v"
+	SID_			"2274"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		"Vehicle Velocity"
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"3dcbc8e3-5c1c-4467-bf7b-6b284c6be74b"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/Vehicle.v"
+	SID_			"2340"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"38546e2b-4c83-42d4-8fe3-d4d64ad6ea49"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/Multiply1"
+	SID_			"2341"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		"Max Yaw Rate"
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"2f8bec0a-3b3f-450b-8533-f65a30f65411"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter"
+	SID_			"2326"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"0cd2f2d9-65b6-4830-9d4c-f576c3ad1272"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Vhcl.YawRate"
+	SID_			"2275"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		"Yaw Rate Feedback"
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"40d0a7b4-7d7b-429f-bb5e-392e2cd8fd24"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/Saturation"
+	SID_			"2421"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"b0d6eac1-c948-44d9-92b6-3a590d7e2dbf"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Delta Torque Splitter"
+	SID_			"2301"
+	SubPath_		""
+	OutputPortIndex_	[2.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"8dcd1e16-a328-49a4-b575-6553e7c8aec1"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Delta Torque Splitter"
+	SID_			"2301"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"17366cec-8847-4066-babc-11f3e00a4a1e"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Steer Angle"
+	SID_			"2395"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"ac22d45c-87a5-41f2-a27a-b322b16b6f29"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Propulsion Torque"
+	SID_			"2315"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"944bd71b-2421-478b-a63c-456c4e8fb65d"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Divide"
+	SID_			"2295"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		"half_deltaT"
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"9e28ed2e-8069-46e5-b740-8c381b22d768"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Delta Torque command"
+	SID_			"2318"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"c683d26a-c1f1-4e5a-8dcf-b2576a555349"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/Read CM Dict6"
+	SID_			"2445"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"e7300a7b-31f1-4fe9-8279-fc1c39f48b9b"
+	BlockPath_		"CarMaker/IPG Vehicle/PowerTrain/Read CM Dict7"
+	SID_			"2447"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      PropName		      "Persistence"
+    }
+  }
   ExtModeBatchMode	  off
   ExtModeEnableFloating	  on
   ExtModeTrigType	  "manual"
@@ -301,7 +809,7 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      8
+      $ObjectID		      9
       Version		      "1.18.1"
       DisabledProps	      []
       Description	      ""
@@ -309,7 +817,7 @@ Model {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  9
+	  $ObjectID		  10
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -350,7 +858,7 @@ Model {
 	  MinimalZcImpactIntegration off
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  10
+	  $ObjectID		  11
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -391,7 +899,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  11
+	  $ObjectID		  12
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -458,7 +966,7 @@ Model {
 	  LabelGuidedReuse	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  12
+	  $ObjectID		  13
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -577,7 +1085,7 @@ Model {
 	  UnderSpecifiedDimensionMsg "none"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  13
+	  $ObjectID		  14
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -625,7 +1133,7 @@ Model {
 	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  14
+	  $ObjectID		  15
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -644,7 +1152,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  15
+	  $ObjectID		  16
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -677,7 +1185,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  16
+	  $ObjectID		  17
 	  Version		  "1.18.1"
 	  Array {
 	    Type		    "Cell"
@@ -764,7 +1272,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      17
+	      $ObjectID		      18
 	      Version		      "1.18.1"
 	      Array {
 		Type			"Cell"
@@ -852,7 +1360,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      18
+	      $ObjectID		      19
 	      Version		      "1.18.1"
 	      Array {
 		Type			"Cell"
@@ -958,7 +1466,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  19
+	  $ObjectID		  20
 	  Version		  "1.18.1"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -998,7 +1506,7 @@ Model {
 	  CovMcdcMode		  "Masking"
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  20
+	  $ObjectID		  21
 	  Version		  "1.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -1006,7 +1514,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    MECH.SimMechanicsCC {
-	      $ObjectID		      21
+	      $ObjectID		      22
 	      Version		      "1.18.1"
 	      DisabledProps	      []
 	      Description	      ""
@@ -1043,7 +1551,7 @@ Model {
 	      VisConfigFile	      ""
 	    }
 	    simmechanics.ConfigurationSet {
-	      $ObjectID		      22
+	      $ObjectID		      23
 	      Version		      "1.18.1"
 	      DisabledProps	      []
 	      Description	      "Simscape Multibody"
@@ -1051,7 +1559,7 @@ Model {
 		Type			"Handle"
 		Dimension		2
 		simmechanics.DiagnosticsConfigSet {
-		  $ObjectID		  23
+		  $ObjectID		  24
 		  Version		  "1.18.1"
 		  DisabledProps		  []
 		  Description		  "Diagnostics"
@@ -1067,7 +1575,7 @@ Model {
 		  SimMechanicsJointTargetOverSpecification "error"
 		}
 		simmechanics.ExplorerConfigSet {
-		  $ObjectID		  24
+		  $ObjectID		  25
 		  Version		  "1.18.1"
 		  DisabledProps		  []
 		  Description		  "Explorer"
@@ -1113,11 +1621,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    8
+    $ObjectID		    9
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    25
+    $ObjectID		    26
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -1474,6 +1982,21 @@ Model {
       LUTDesignAbsError	      "1e-6"
     }
     Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+      AlgorithmType	      "Newton-Raphson"
+      Iterations	      "3"
+    }
+    Block {
       BlockType		      Mux
       Inputs		      "4"
       DisplayOption	      "none"
@@ -1527,9 +2050,19 @@ Model {
       MultiThreadCoSim	      "auto"
     }
     Block {
-      BlockType		      Signum
+      BlockType		      Saturate
+      UpperLimitSource	      "Dialog"
+      UpperLimit	      "0.5"
+      LowerLimitSource	      "Dialog"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
       ZeroCross		      on
       SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
     }
     Block {
       BlockType		      Stop
@@ -1627,20 +2160,20 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "2358"
+    SIDHighWatermark	    "2448"
     Block {
       BlockType		      SubSystem
       Name		      "CarMaker"
       SID		      "1726"
       Ports		      []
-      Position		      [135, 130, 242, 193]
+      Position		      [-235, -90, -128, -27]
       ZOrder		      -1
       BackgroundColor	      "lightBlue"
       TreatAsAtomicUnit	      on
       RequestExecContextInheritance off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		26
+	$ObjectID		27
 	$ClassName		"Simulink.Mask"
 	Display			"image(imread('CarMakerSys.png'));"
       }
@@ -2585,7 +3118,7 @@ Model {
 	      RequestExecContextInheritance off
 	      System {
 		Name			"Brake"
-		Location		[98, 247, 1100, 951]
+		Location		[-8, -8, 1928, 1048]
 		Open			off
 		PortBlocksUseCompactNotation off
 		SetExecutionDomain	off
@@ -13645,12 +14178,12 @@ Model {
 		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 		TiledPageScale		1
 		ShowPageBoundaries	off
-		ZoomFactor		"101"
+		ZoomFactor		"125"
 		Block {
 		  BlockType		  Inport
 		  Name			  "Sync_In"
 		  SID			  "2182"
-		  Position		  [95, 73, 125, 87]
+		  Position		  [375, -12, 405, 2]
 		  ZOrder		  -1
 		  IconDisplay		  "Port number"
 		}
@@ -13658,7 +14191,7 @@ Model {
 		  BlockType		  Inport
 		  Name			  "Vhcl.Wheel.PT"
 		  SID			  "2183"
-		  Position		  [95, 178, 125, 192]
+		  Position		  [375, 93, 405, 107]
 		  ZOrder		  -2
 		  Port			  "2"
 		  IconDisplay		  "Port number"
@@ -13667,7 +14200,7 @@ Model {
 		  BlockType		  Inport
 		  Name			  "VhclCtrl.PT"
 		  SID			  "2184"
-		  Position		  [95, 283, 125, 297]
+		  Position		  [375, 198, 405, 212]
 		  ZOrder		  -3
 		  Port			  "3"
 		  IconDisplay		  "Port number"
@@ -13677,7 +14210,7 @@ Model {
 		  Name			  "BusCreator1"
 		  SID			  "2185"
 		  Ports			  [42, 1]
-		  Position		  [515, 123, 520, 557]
+		  Position		  [795, 38, 800, 472]
 		  ZOrder		  3
 		  ShowName		  off
 		  Inputs		  "42"
@@ -13688,7 +14221,7 @@ Model {
 		  Name			  "Demux1"
 		  SID			  "2186"
 		  Ports			  [1, 42]
-		  Position		  [340, 122, 345, 558]
+		  Position		  [620, 37, 625, 473]
 		  ZOrder		  2
 		  BackgroundColor	  "black"
 		  ShowName		  off
@@ -13863,16 +14396,212 @@ Model {
 		  }
 		}
 		Block {
+		  BlockType		  S-Function
+		  Name			  "PowerTrain"
+		  SID			  "2187"
+		  Ports			  [3, 2]
+		  Position		  [485, -58, 560, 258]
+		  ZOrder		  -6
+		  BackgroundColor	  "green"
+		  FunctionName		  "CM_Sfun"
+		  Parameters		  "'PowerTrain'"
+		  SFunctionDeploymentMode off
+		  EnableBusSupport	  off
+		  SFcnIsStateOwnerBlock	  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "Sync"
+		  }
+		}
+		Block {
+		  BlockType		  S-Function
+		  Name			  "PowerTrainUpd"
+		  SID			  "2188"
+		  Ports			  [2, 1]
+		  Position		  [925, -59, 1005, 259]
+		  ZOrder		  -7
+		  BackgroundColor	  "green"
+		  FunctionName		  "CM_Sfun"
+		  Parameters		  "'PowerTrainUpd'"
+		  SFunctionDeploymentMode off
+		  EnableBusSupport	  off
+		  SFcnIsStateOwnerBlock	  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Read CM Dict"
+		  SID			  "2260"
+		  Ports			  [0, 1]
+		  Position		  [465, 525, 535, 545]
+		  ZOrder		  31
+		  BackgroundColor	  "orange"
+		  LibraryVersion	  "1.493"
+		  SourceBlock		  "CarMaker4SL/Read CM Dict"
+		  SourceType		  "Read CarMaker Dictionary Variable(s)"
+		  SourceProductName	  "CarMaker4SL"
+		  MultiThreadCoSim	  "auto"
+		  xname			  "PT.WRL.rotv"
+		  xsync			  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Read CM Dict1"
+		  SID			  "2261"
+		  Ports			  [0, 1]
+		  Position		  [465, 555, 535, 575]
+		  ZOrder		  32
+		  BackgroundColor	  "orange"
+		  LibraryVersion	  "1.493"
+		  SourceBlock		  "CarMaker4SL/Read CM Dict"
+		  SourceType		  "Read CarMaker Dictionary Variable(s)"
+		  SourceProductName	  "CarMaker4SL"
+		  MultiThreadCoSim	  "auto"
+		  xname			  "PT.WRR.rotv"
+		  xsync			  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Read CM Dict2"
+		  SID			  "2262"
+		  Ports			  [0, 1]
+		  Position		  [465, 585, 535, 605]
+		  ZOrder		  33
+		  BackgroundColor	  "orange"
+		  LibraryVersion	  "1.493"
+		  SourceBlock		  "CarMaker4SL/Read CM Dict"
+		  SourceType		  "Read CarMaker Dictionary Variable(s)"
+		  SourceProductName	  "CarMaker4SL"
+		  MultiThreadCoSim	  "auto"
+		  xname			  "VC.Gas"
+		  xsync			  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Read CM Dict3"
+		  SID			  "2272"
+		  Ports			  [0, 1]
+		  Position		  [455, 647, 540, 663]
+		  ZOrder		  39
+		  BackgroundColor	  "orange"
+		  LibraryVersion	  "1.493"
+		  SourceBlock		  "CarMaker4SL/Read CM Dict"
+		  SourceType		  "Read CarMaker Dictionary Variable(s)"
+		  SourceProductName	  "CarMaker4SL"
+		  MultiThreadCoSim	  "auto"
+		  xname			  "Vhcl.v"
+		  xsync			  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Read CM Dict4"
+		  SID			  "2273"
+		  Ports			  [0, 1]
+		  Position		  [455, 677, 540, 693]
+		  ZOrder		  40
+		  BackgroundColor	  "orange"
+		  LibraryVersion	  "1.493"
+		  SourceBlock		  "CarMaker4SL/Read CM Dict"
+		  SourceType		  "Read CarMaker Dictionary Variable(s)"
+		  SourceProductName	  "CarMaker4SL"
+		  MultiThreadCoSim	  "auto"
+		  xname			  "Vhcl.YawRate"
+		  xsync			  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Read CM Dict5"
+		  SID			  "2277"
+		  Ports			  [0, 1]
+		  Position		  [455, 707, 540, 723]
+		  ZOrder		  41
+		  BackgroundColor	  "orange"
+		  LibraryVersion	  "1.493"
+		  SourceBlock		  "CarMaker4SL/Read CM Dict"
+		  SourceType		  "Read CarMaker Dictionary Variable(s)"
+		  SourceProductName	  "CarMaker4SL"
+		  MultiThreadCoSim	  "auto"
+		  xname			  "Vhcl.Steer.Ang"
+		  xsync			  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Read CM Dict6"
+		  SID			  "2445"
+		  Ports			  [0, 1]
+		  Position		  [35, 490, 105, 510]
+		  ZOrder		  265
+		  BackgroundColor	  "orange"
+		  LibraryVersion	  "1.493"
+		  SourceBlock		  "CarMaker4SL/Read CM Dict"
+		  SourceType		  "Read CarMaker Dictionary Variable(s)"
+		  SourceProductName	  "CarMaker4SL"
+		  MultiThreadCoSim	  "auto"
+		  xname			  "Vhcl.PoI.x"
+		  xsync			  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "xPos"
+		    DataLogging		    on
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Read CM Dict7"
+		  SID			  "2447"
+		  Ports			  [0, 1]
+		  Position		  [35, 540, 105, 560]
+		  ZOrder		  267
+		  BackgroundColor	  "orange"
+		  LibraryVersion	  "1.493"
+		  SourceBlock		  "CarMaker4SL/Read CM Dict"
+		  SourceType		  "Read CarMaker Dictionary Variable(s)"
+		  SourceProductName	  "CarMaker4SL"
+		  MultiThreadCoSim	  "auto"
+		  xname			  "Vhcl.PoI.y"
+		  xsync			  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "yPos"
+		    DataLogging		    on
+		  }
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Read CM Parameter"
+		  SID			  "2263"
+		  Ports			  [0, 1]
+		  Position		  [430, 610, 565, 640]
+		  ZOrder		  34
+		  BackgroundColor	  "orange"
+		  LibraryVersion	  "1.493"
+		  SourceBlock		  "CarMaker4SL/Read CM Parameter"
+		  SourceType		  "Read CarMaker Infofile Parameter"
+		  SourceProductName	  "CarMaker4SL"
+		  MultiThreadCoSim	  "auto"
+		  xfile			  "Vehicle"
+		  xkey			  "PowerTrain.DL.iDiff_mean"
+		  xnout			  "1"
+		  xdefaults		  "0"
+		  xmuxed		  on
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "TV Enable"
+		  SID			  "2280"
+		  Position		  [480, 730, 510, 760]
+		  ZOrder		  262
+		}
+		Block {
 		  BlockType		  SubSystem
-		  Name			  "MyPowerTrainXWD"
+		  Name			  "TV_System"
 		  SID			  "2239"
 		  Ports			  [8, 4]
-		  Position		  [340, 613, 515, 837]
+		  Position		  [620, 528, 795, 752]
 		  ZOrder		  30
 		  BackgroundColor	  "orange"
 		  RequestExecContextInheritance	off
 		  System {
-		    Name		    "MyPowerTrainXWD"
+		    Name		    "TV_System"
 		    Location		    [-8, -8, 1928, 1048]
 		    Open		    on
 		    PortBlocksUseCompactNotation off
@@ -13888,12 +14617,12 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "80"
+		    ZoomFactor		    "100"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "PT.WRL.rotv"
 		    SID			    "2240"
-		    Position		    [-1780, -367, -1750, -353]
+		    Position		    [-1695, -782, -1665, -768]
 		    ZOrder		    -1
 		    BackgroundColor	    "orange"
 		    IconDisplay		    "Port number"
@@ -13902,7 +14631,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "PT.WRR.rotv"
 		    SID			    "2241"
-		    Position		    [-1780, -317, -1750, -303]
+		    Position		    [-1695, -732, -1665, -718]
 		    ZOrder		    11
 		    BackgroundColor	    "orange"
 		    Port		    "2"
@@ -13912,7 +14641,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "Gas"
 		    SID			    "2242"
-		    Position		    [-1335, -267, -1305, -253]
+		    Position		    [-1250, -682, -1220, -668]
 		    ZOrder		    22
 		    BackgroundColor	    "orange"
 		    Port		    "3"
@@ -13922,7 +14651,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "iDiff_mean"
 		    SID			    "2243"
-		    Position		    [-1780, -427, -1750, -413]
+		    Position		    [-1695, -842, -1665, -828]
 		    ZOrder		    26
 		    BackgroundColor	    "orange"
 		    Port		    "4"
@@ -13932,7 +14661,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "Vhcl.v"
 		    SID			    "2274"
-		    Position		    [-1790, 153, -1760, 167]
+		    Position		    [-1705, -262, -1675, -248]
 		    ZOrder		    34
 		    BackgroundColor	    "orange"
 		    Port		    "5"
@@ -13946,7 +14675,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "Vhcl.YawRate"
 		    SID			    "2275"
-		    Position		    [-1480, 263, -1450, 277]
+		    Position		    [-1395, -152, -1365, -138]
 		    ZOrder		    35
 		    BackgroundColor	    "orange"
 		    Port		    "6"
@@ -13960,7 +14689,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "Vhcl.Steer.Ang"
 		    SID			    "2276"
-		    Position		    [-1790, 188, -1760, 202]
+		    Position		    [-1705, -227, -1675, -213]
 		    ZOrder		    36
 		    BackgroundColor	    "orange"
 		    Port		    "7"
@@ -13970,7 +14699,7 @@ Model {
 		    BlockType		    Inport
 		    Name		    "TV Enable"
 		    SID			    "2278"
-		    Position		    [-820, -42, -790, -28]
+		    Position		    [-735, -427, -705, -413]
 		    ZOrder		    37
 		    BackgroundColor	    "orange"
 		    Port		    "8"
@@ -13980,7 +14709,7 @@ Model {
 		    BlockType		    Gain
 		    Name		    " "
 		    SID			    "2244"
-		    Position		    [-1545, -375, -1515, -345]
+		    Position		    [-1460, -790, -1430, -760]
 		    ZOrder		    13
 		    Gain		    "1/2"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -13991,7 +14720,7 @@ Model {
 		    BlockType		    Gain
 		    Name		    "  "
 		    SID			    "2245"
-		    Position		    [-1190, -335, -1160, -305]
+		    Position		    [-1105, -750, -1075, -720]
 		    ZOrder		    24
 		    Gain		    "1/2"
 		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -14003,7 +14732,7 @@ Model {
 		    Name		    "   "
 		    SID			    "2246"
 		    Ports		    [2, 1]
-		    Position		    [-1115, -343, -1085, -312]
+		    Position		    [-1030, -758, -1000, -727]
 		    ZOrder		    25
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -14019,7 +14748,7 @@ Model {
 		    Name		    "    "
 		    SID			    "2247"
 		    Ports		    [2, 1]
-		    Position		    [-1475, -383, -1445, -352]
+		    Position		    [-1390, -798, -1360, -767]
 		    ZOrder		    15
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -14027,350 +14756,12 @@ Model {
 		    SaturateOnIntegerOverflow off
 		    }
 		    Block {
-		    BlockType		    Lookup_n-D
-		    Name		    "1-D Lookup\nTable"
-		    SID			    "2249"
-		    Ports		    [1, 1]
-		    Position		    [-1355, -362, -1290, -298]
-		    ZOrder		    33
-		    NumberOfTableDimensions "1"
-		    BreakpointsForDimension1 "[0,700,1400,2100,3000,8000]"
-		    Table		    "[300,300,150,100,75,20]"
-		    InternalRulePriority    "Speed"
-		    RndMeth		    "Simplest"
-		    }
-		    Block {
-		    BlockType		    Abs
-		    Name		    "Abs"
-		    SID			    "2250"
-		    Position		    [-1410, -380, -1380, -350]
-		    ZOrder		    17
-		    ShowName		    off
-		    SaturateOnIntegerOverflow off
-		    }
-		    Block {
-		    BlockType		    Demux
-		    Name		    "Demux"
-		    SID			    "2353"
-		    Ports		    [1, 4]
-		    Position		    [-1180, 205, -1175, 325]
-		    ZOrder		    26229
-		    ShowName		    off
-		    DisplayOption	    "bar"
-		    }
-		    Block {
 		    BlockType		    SubSystem
-		    Name		    "Desired Yaw Rate Generator"
-		    SID			    "2282"
-		    Ports		    [2, 1]
-		    Position		    [-1550, 144, -1380, 211]
-		    ZOrder		    310
-		    RequestExecContextInheritance off
-		    ContentPreviewEnabled   on
-		    Port {
-		    PortNumber		    1
-		    Name		    "Desired Yaw Rate"
-		    PropagatedSignals	    "desired_yaw"
-		    }
-		    System {
-		    Name		    "Desired Yaw Rate Generator"
-		    Location		    [-8, -8, 1928, 1048]
-		    Open		    off
-		    PortBlocksUseCompactNotation off
-		    SetExecutionDomain	    off
-		    ExecutionDomainType	    "Deduce"
-		    ModelBrowserVisibility  off
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "Linear Car Velocity"
-		    SID			    "2283"
-		    Position		    [265, 48, 295, 62]
-		    ZOrder		    16
-		    BackgroundColor	    "orange"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "steering angle"
-		    SID			    "2284"
-		    Position		    [265, 98, 295, 112]
-		    ZOrder		    17
-		    BackgroundColor	    "orange"
-		    Port		    "2"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Constant
-		    Name		    "Constant"
-		    SID			    "2285"
-		    Position		    [265, 190, 295, 220]
-		    ZOrder		    19
-		    Value		    "Lf"
-		    }
-		    Block {
-		    BlockType		    Constant
-		    Name		    "Constant1"
-		    SID			    "2286"
-		    Position		    [265, 140, 295, 170]
-		    ZOrder		    15
-		    Value		    "0"
-		    }
-		    Block {
-		    BlockType		    Constant
-		    Name		    "Constant2"
-		    SID			    "2287"
-		    Position		    [265, 240, 295, 270]
-		    ZOrder		    20
-		    Value		    "Lr"
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "MATLAB Function"
-		    SID			    "2288"
-		    Ports		    [5, 1]
-		    Position		    [385, 25, 570, 285]
-		    ZOrder		    14
-		    ErrorFcn		    "Stateflow.Translate.translate"
-		    PermitHierarchicalResolution "ExplicitOnly"
-		    TreatAsAtomicUnit	    on
-		    RequestExecContextInheritance off
-		    SFBlockType		    "MATLAB Function"
-		    ContentPreviewEnabled   on
-		    System {
-		    Name		    "MATLAB Function"
-		    Location		    [223, 338, 826, 833]
-		    Open		    off
-		    PortBlocksUseCompactNotation off
-		    SetExecutionDomain	    off
-		    ExecutionDomainType	    "Deduce"
-		    ModelBrowserVisibility  off
-		    ModelBrowserWidth	    200
-		    ScreenColor		    "white"
-		    PaperOrientation	    "landscape"
-		    PaperPositionMode	    "auto"
-		    PaperType		    "usletter"
-		    PaperUnits		    "inches"
-		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-		    TiledPageScale	    1
-		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "26"
-		    Block {
-		    BlockType		    Inport
-		    Name		    "Vcg"
-		    SID			    "2288::1"
-		    Position		    [20, 101, 40, 119]
-		    ZOrder		    -1
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "steering_angle"
-		    SID			    "2288::23"
-		    Position		    [20, 136, 40, 154]
-		    ZOrder		    14
-		    Port		    "2"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "understeer_coeff"
-		    SID			    "2288::24"
-		    Position		    [20, 171, 40, 189]
-		    ZOrder		    15
-		    Port		    "3"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "Lf"
-		    SID			    "2288::25"
-		    Position		    [20, 206, 40, 224]
-		    ZOrder		    16
-		    Port		    "4"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "Lr"
-		    SID			    "2288::26"
-		    Position		    [20, 246, 40, 264]
-		    ZOrder		    17
-		    Port		    "5"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Demux
-		    Name		    " Demux "
-		    SID			    "2288::20"
+		    Name		    "'base' Gain Scheduler (v1)"
+		    SID			    "2376"
 		    Ports		    [1, 1]
-		    Position		    [270, 230, 320, 270]
-		    ZOrder		    11
-		    Outputs		    "1"
-		    }
-		    Block {
-		    BlockType		    S-Function
-		    Name		    " SFunction "
-		    SID			    "2288::19"
-		    Tag			    "Stateflow S-Function generic 2"
-		    Ports		    [5, 2]
-		    Position		    [180, 110, 230, 230]
-		    ZOrder		    10
-		    FunctionName	    "sf_sfun"
-		    PortCounts		    "[5 2]"
-		    SFunctionDeploymentMode off
-		    EnableBusSupport	    on
-		    SFcnIsStateOwnerBlock   off
-		    Port {
-		    PortNumber		    2
-		    Name		    "desired_yaw"
-		    }
-		    }
-		    Block {
-		    BlockType		    Terminator
-		    Name		    " Terminator "
-		    SID			    "2288::21"
-		    Position		    [460, 241, 480, 259]
-		    ZOrder		    12
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "desired_yaw"
-		    SID			    "2288::5"
-		    Position		    [460, 101, 480, 119]
-		    ZOrder		    -5
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    ZOrder		    1
-		    SrcBlock		    "Vcg"
-		    SrcPort		    1
-		    DstBlock		    " SFunction "
-		    DstPort		    1
-		    }
-		    Line {
-		    ZOrder		    2
-		    SrcBlock		    "steering_angle"
-		    SrcPort		    1
-		    DstBlock		    " SFunction "
-		    DstPort		    2
-		    }
-		    Line {
-		    ZOrder		    3
-		    SrcBlock		    "understeer_coeff"
-		    SrcPort		    1
-		    DstBlock		    " SFunction "
-		    DstPort		    3
-		    }
-		    Line {
-		    ZOrder		    4
-		    SrcBlock		    "Lf"
-		    SrcPort		    1
-		    DstBlock		    " SFunction "
-		    DstPort		    4
-		    }
-		    Line {
-		    ZOrder		    5
-		    SrcBlock		    "Lr"
-		    SrcPort		    1
-		    DstBlock		    " SFunction "
-		    DstPort		    5
-		    }
-		    Line {
-		    Name		    "desired_yaw"
-		    ZOrder		    6
-		    Labels		    [0, 0]
-		    SrcBlock		    " SFunction "
-		    SrcPort		    2
-		    DstBlock		    "desired_yaw"
-		    DstPort		    1
-		    }
-		    Line {
-		    ZOrder		    7
-		    SrcBlock		    " Demux "
-		    SrcPort		    1
-		    DstBlock		    " Terminator "
-		    DstPort		    1
-		    }
-		    Line {
-		    ZOrder		    8
-		    SrcBlock		    " SFunction "
-		    SrcPort		    1
-		    DstBlock		    " Demux "
-		    DstPort		    1
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    Outport
-		    Name		    "Desired Yaw Rate"
-		    SID			    "2289"
-		    Position		    [655, 148, 685, 162]
-		    ZOrder		    18
-		    BackgroundColor	    "cyan"
-		    IconDisplay		    "Port number"
-		    }
-		    Line {
-		    ZOrder		    1
-		    SrcBlock		    "Constant1"
-		    SrcPort		    1
-		    DstBlock		    "MATLAB Function"
-		    DstPort		    3
-		    }
-		    Line {
-		    ZOrder		    2
-		    SrcBlock		    "steering angle"
-		    SrcPort		    1
-		    DstBlock		    "MATLAB Function"
-		    DstPort		    2
-		    }
-		    Line {
-		    ZOrder		    3
-		    SrcBlock		    "MATLAB Function"
-		    SrcPort		    1
-		    DstBlock		    "Desired Yaw Rate"
-		    DstPort		    1
-		    }
-		    Line {
-		    ZOrder		    4
-		    SrcBlock		    "Linear Car Velocity"
-		    SrcPort		    1
-		    DstBlock		    "MATLAB Function"
-		    DstPort		    1
-		    }
-		    Line {
-		    ZOrder		    5
-		    SrcBlock		    "Constant2"
-		    SrcPort		    1
-		    DstBlock		    "MATLAB Function"
-		    DstPort		    5
-		    }
-		    Line {
-		    ZOrder		    6
-		    SrcBlock		    "Constant"
-		    SrcPort		    1
-		    DstBlock		    "MATLAB Function"
-		    DstPort		    4
-		    }
-		    }
-		    }
-		    Block {
-		    BlockType		    SubSystem
-		    Name		    "Gain Scheduler\n(PIDN Lookup)"
-		    SID			    "2345"
-		    Ports		    [1, 1]
-		    Position		    [-1515, 27, -1420, 83]
-		    ZOrder		    26227
+		    Position		    [-3105, -731, -3005, -679]
+		    ZOrder		    26234
 		    RequestExecContextInheritance off
 		    ContentPreviewEnabled   on
 		    Port {
@@ -14378,7 +14769,7 @@ Model {
 		    Name		    "PID Gains + Filter Coeff N"
 		    }
 		    System {
-		    Name		    "Gain Scheduler\n(PIDN Lookup)"
+		    Name		    "'base' Gain Scheduler (v1)"
 		    Location		    [-8, -8, 1928, 1048]
 		    Open		    off
 		    PortBlocksUseCompactNotation off
@@ -14398,149 +14789,151 @@ Model {
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Vhcl.v"
-		    SID			    "2346"
-		    Position		    [10, 173, 40, 187]
-		    ZOrder		    26207
-		    BackgroundColor	    "orange"
+		    SID			    "2377"
+		    Position		    [280, 208, 310, 222]
+		    ZOrder		    26203
 		    IconDisplay		    "Port number"
 		    }
 		    Block {
 		    BlockType		    Lookup_n-D
 		    Name		    "Kd Lookup"
-		    SID			    "2291"
+		    SID			    "2378"
 		    Ports		    [1, 1]
-		    Position		    [205, 188, 270, 252]
-		    ZOrder		    26205
+		    Position		    [530, 243, 595, 307]
+		    ZOrder		    26201
 		    NumberOfTableDimensions "1"
 		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
-		    Table		    "[0,0,0,0,0,-0.40505,-0.50277,-1.0544]"
+		    Table		    "[0,0,-7.97,-5.4677,-0.031525,-11.8165,-3.65,-0.34472]"
 		    InternalRulePriority    "Speed"
 		    RndMeth		    "Simplest"
 		    }
 		    Block {
 		    BlockType		    Lookup_n-D
 		    Name		    "Ki Lookup"
-		    SID			    "2292"
+		    SID			    "2379"
 		    Ports		    [1, 1]
-		    Position		    [205, 103, 270, 167]
-		    ZOrder		    26204
+		    Position		    [530, 128, 595, 192]
+		    ZOrder		    26200
 		    NumberOfTableDimensions "1"
 		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
-		    Table		    "[37865.65,10454.7184,5331.6587,8450.1199,7889.3391,7361.3561,6813.2147,6310.914]"
+		    Table		    "[113386.3639,53139.3625,39431.5219,38685.5046,41858.1647,35177.4525,42819.4908,44127.9844]"
 		    InternalRulePriority    "Speed"
 		    RndMeth		    "Simplest"
 		    }
 		    Block {
 		    BlockType		    Lookup_n-D
 		    Name		    "Kp Lookup"
-		    SID			    "2293"
+		    SID			    "2380"
 		    Ports		    [1, 1]
-		    Position		    [205, 18, 270, 82]
-		    ZOrder		    26203
+		    Position		    [530, 18, 595, 82]
+		    ZOrder		    335
 		    NumberOfTableDimensions "1"
 		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
-		    Table		    "[0,0,0,127.0119,171.5424,208.4617,225.764,251.3245]"
+		    Table		    "[0,201.9987,715,1006.2519,1334.3392,1559.4809,1823.2205,1917.1532]"
 		    InternalRulePriority    "Speed"
 		    RndMeth		    "Simplest"
 		    }
 		    Block {
 		    BlockType		    Mux
 		    Name		    "Mux"
-		    SID			    "2351"
+		    SID			    "2381"
 		    Ports		    [4, 1]
-		    Position		    [430, 3, 435, 352]
-		    ZOrder		    26212
+		    Position		    [760, 113, 765, 317]
+		    ZOrder		    26208
 		    ShowName		    off
 		    DisplayOption	    "bar"
 		    }
 		    Block {
 		    BlockType		    Lookup_n-D
 		    Name		    "N Lookup"
-		    SID			    "2294"
+		    SID			    "2382"
 		    Ports		    [1, 1]
-		    Position		    [205, 273, 270, 337]
-		    ZOrder		    26206
+		    Position		    [530, 363, 595, 427]
+		    ZOrder		    26202
 		    NumberOfTableDimensions "1"
 		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
-		    Table		    "[0,0,0,0,0,31.6952,27.1972,27.1927]"
+		    Table		    "[100,100,25.9478,36.7197,4232.6962,38.2401,499.5103,5561.304]"
 		    InternalRulePriority    "Speed"
 		    RndMeth		    "Simplest"
 		    }
 		    Block {
 		    BlockType		    Outport
 		    Name		    "PIDN Gains"
-		    SID			    "2347"
-		    Position		    [510, 173, 540, 187]
-		    ZOrder		    26213
-		    BackgroundColor	    "cyan"
+		    SID			    "2383"
+		    Position		    [855, 208, 885, 222]
+		    ZOrder		    26210
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    79
-		    SrcBlock		    "Kd Lookup"
-		    SrcPort		    1
-		    DstBlock		    "Mux"
-		    DstPort		    3
-		    }
-		    Line {
-		    ZOrder		    68
+		    ZOrder		    1
 		    SrcBlock		    "Vhcl.v"
 		    SrcPort		    1
-		    Points		    [20, 0]
+		    Points		    [79, 0]
 		    Branch {
-		    ZOrder		    82
-		    Points		    [0, 40]
+		    ZOrder		    2
+		    Points		    [0, 60]
 		    Branch {
-		    ZOrder		    74
-		    Points		    [0, 85]
+		    ZOrder		    3
+		    Points		    [0, 120]
 		    DstBlock		    "N Lookup"
 		    DstPort		    1
 		    }
 		    Branch {
-		    ZOrder		    63
+		    ZOrder		    4
 		    DstBlock		    "Kd Lookup"
 		    DstPort		    1
 		    }
 		    }
 		    Branch {
-		    ZOrder		    73
-		    Points		    [0, -45]
+		    ZOrder		    5
+		    Points		    [0, -55]
 		    Branch {
-		    ZOrder		    61
-		    Points		    [0, -85]
-		    DstBlock		    "Kp Lookup"
-		    DstPort		    1
-		    }
-		    Branch {
-		    ZOrder		    60
+		    ZOrder		    6
 		    DstBlock		    "Ki Lookup"
 		    DstPort		    1
 		    }
-		    }
-		    }
-		    Line {
-		    ZOrder		    78
-		    SrcBlock		    "Ki Lookup"
-		    SrcPort		    1
-		    DstBlock		    "Mux"
-		    DstPort		    2
-		    }
-		    Line {
-		    ZOrder		    77
-		    SrcBlock		    "Kp Lookup"
-		    SrcPort		    1
-		    DstBlock		    "Mux"
+		    Branch {
+		    ZOrder		    7
+		    Points		    [0, -110]
+		    DstBlock		    "Kp Lookup"
 		    DstPort		    1
 		    }
+		    }
+		    }
 		    Line {
-		    ZOrder		    80
+		    ZOrder		    8
 		    SrcBlock		    "N Lookup"
 		    SrcPort		    1
+		    Points		    [94, 0; 0, -105]
 		    DstBlock		    "Mux"
 		    DstPort		    4
 		    }
 		    Line {
-		    ZOrder		    76
+		    ZOrder		    9
+		    SrcBlock		    "Ki Lookup"
+		    SrcPort		    1
+		    Points		    [71, 0; 0, 30]
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    10
+		    SrcBlock		    "Kp Lookup"
+		    SrcPort		    1
+		    Points		    [91, 0; 0, 90]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    11
+		    SrcBlock		    "Kd Lookup"
+		    SrcPort		    1
+		    Points		    [74, 0; 0, -35]
+		    DstBlock		    "Mux"
+		    DstPort		    3
+		    }
+		    Line {
+		    ZOrder		    12
 		    SrcBlock		    "Mux"
 		    SrcPort		    1
 		    DstBlock		    "PIDN Gains"
@@ -14549,11 +14942,567 @@ Model {
 		    }
 		    }
 		    Block {
+		    BlockType		    SubSystem
+		    Name		    "'base' Gain Scheduler (v2)"
+		    SID			    "2386"
+		    Ports		    [1, 1]
+		    Position		    [-3065, -806, -2965, -754]
+		    ZOrder		    26237
+		    RequestExecContextInheritance off
+		    ContentPreviewEnabled   on
+		    Port {
+		    PortNumber		    1
+		    Name		    "PID Gains + Filter Coeff N"
+		    }
+		    System {
+		    Name		    "'base' Gain Scheduler (v2)"
+		    Location		    [-8, -8, 1928, 1048]
+		    Open		    off
+		    PortBlocksUseCompactNotation off
+		    SetExecutionDomain	    off
+		    ExecutionDomainType	    "Deduce"
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "80"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Vhcl.v"
+		    SID			    "2387"
+		    Position		    [280, 208, 310, 222]
+		    ZOrder		    26203
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Kd Lookup"
+		    SID			    "2388"
+		    Ports		    [1, 1]
+		    Position		    [530, 243, 595, 307]
+		    ZOrder		    26201
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[0,0,0,0,0,0,0,0]"
+		    InterpMethod	    "Nearest"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Ki Lookup"
+		    SID			    "2389"
+		    Ports		    [1, 1]
+		    Position		    [530, 128, 595, 192]
+		    ZOrder		    26200
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[575414.9239,182260.6677,104061.59,70206.68,51512.3181,39932.8377,32134.3505,38079.8684]"
+		    InterpMethod	    "Nearest"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Kp Lookup"
+		    SID			    "2390"
+		    Ports		    [1, 1]
+		    Position		    [530, 18, 595, 82]
+		    ZOrder		    335
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[0,0,2000,2000,0,0,0,0]"
+		    InterpMethod	    "Nearest"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux"
+		    SID			    "2391"
+		    Ports		    [4, 1]
+		    Position		    [760, 113, 765, 317]
+		    ZOrder		    26208
+		    ShowName		    off
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "N Lookup"
+		    SID			    "2392"
+		    Ports		    [1, 1]
+		    Position		    [530, 363, 595, 427]
+		    ZOrder		    26202
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[100,100,100,100,100,100,100,100]"
+		    InterpMethod	    "Nearest"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "PIDN Gains"
+		    SID			    "2393"
+		    Position		    [855, 208, 885, 222]
+		    ZOrder		    26210
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    1
+		    SrcBlock		    "Vhcl.v"
+		    SrcPort		    1
+		    Points		    [79, 0]
+		    Branch {
+		    ZOrder		    2
+		    Points		    [0, 60]
+		    Branch {
+		    ZOrder		    3
+		    Points		    [0, 120]
+		    DstBlock		    "N Lookup"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    4
+		    DstBlock		    "Kd Lookup"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    ZOrder		    5
+		    Points		    [0, -55]
+		    Branch {
+		    ZOrder		    6
+		    DstBlock		    "Ki Lookup"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    7
+		    Points		    [0, -110]
+		    DstBlock		    "Kp Lookup"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Line {
+		    ZOrder		    8
+		    SrcBlock		    "N Lookup"
+		    SrcPort		    1
+		    Points		    [94, 0; 0, -105]
+		    DstBlock		    "Mux"
+		    DstPort		    4
+		    }
+		    Line {
+		    ZOrder		    9
+		    SrcBlock		    "Ki Lookup"
+		    SrcPort		    1
+		    Points		    [71, 0; 0, 30]
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    10
+		    SrcBlock		    "Kp Lookup"
+		    SrcPort		    1
+		    Points		    [91, 0; 0, 90]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    11
+		    SrcBlock		    "Kd Lookup"
+		    SrcPort		    1
+		    Points		    [74, 0; 0, -35]
+		    DstBlock		    "Mux"
+		    DstPort		    3
+		    }
+		    Line {
+		    ZOrder		    12
+		    SrcBlock		    "Mux"
+		    SrcPort		    1
+		    DstBlock		    "PIDN Gains"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "1-D Lookup\nTable"
+		    SID			    "2249"
+		    Ports		    [1, 1]
+		    Position		    [-1270, -777, -1205, -713]
+		    ZOrder		    33
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[0,700,1400,2100,3000,8000]"
+		    Table		    "[240,240,240,240,235,216]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Abs
+		    Name		    "Abs"
+		    SID			    "2250"
+		    Position		    [-1325, -795, -1295, -765]
+		    ZOrder		    17
+		    ShowName		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Define CM Dict"
+		    SID			    "2384"
+		    Ports		    []
+		    Position		    [-470, -870, -375, -845]
+		    ZOrder		    26232
+		    BackgroundColor	    "orange"
+		    LibraryVersion	    "1.493"
+		    SourceBlock		    "CarMaker4SL/Define CM Dict"
+		    SourceType		    "Define CarMaker Dictionary Variable"
+		    SourceProductName	    "CarMaker4SL"
+		    MultiThreadCoSim	    "auto"
+		    xname		    "RefYawRate"
+		    xunit		    "rad/s"
+		    xmono		    off
+		    xtype		    "Double4"
+		    xdvaplace		    "None"
+		    xnstates		    "0"
+		    xfirststate		    "0"
+		    xinitial		    "0"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Define CM Dict1"
+		    SID			    "2405"
+		    Ports		    []
+		    Position		    [-470, -810, -375, -785]
+		    ZOrder		    26238
+		    BackgroundColor	    "orange"
+		    LibraryVersion	    "1.493"
+		    SourceBlock		    "CarMaker4SL/Define CM Dict"
+		    SourceType		    "Define CarMaker Dictionary Variable"
+		    SourceProductName	    "CarMaker4SL"
+		    MultiThreadCoSim	    "auto"
+		    xname		    "DesYawRate"
+		    xunit		    "rad/s"
+		    xmono		    off
+		    xtype		    "Double4"
+		    xdvaplace		    "None"
+		    xnstates		    "0"
+		    xfirststate		    "0"
+		    xinitial		    "0"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Define CM Dict2"
+		    SID			    "2441"
+		    Ports		    []
+		    Position		    [-460, -755, -390, -735]
+		    ZOrder		    26243
+		    BackgroundColor	    "orange"
+		    LibraryVersion	    "1.493"
+		    SourceBlock		    "CarMaker4SL/Define CM Dict"
+		    SourceType		    "Define CarMaker Dictionary Variable"
+		    SourceProductName	    "CarMaker4SL"
+		    MultiThreadCoSim	    "auto"
+		    xname		    "YawRateError"
+		    xunit		    "rad/s"
+		    xmono		    off
+		    xtype		    "Double4"
+		    xdvaplace		    "None"
+		    xnstates		    "0"
+		    xfirststate		    "0"
+		    xinitial		    "0"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    "Demux"
+		    SID			    "2353"
+		    Ports		    [1, 4]
+		    Position		    [-1095, -210, -1090, -90]
+		    ZOrder		    26229
+		    ShowName		    off
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "Desired Yaw Rate Generator"
+		    SID			    "2282"
+		    Ports		    [2, 1]
+		    Position		    [-1465, -271, -1295, -204]
+		    ZOrder		    310
+		    RequestExecContextInheritance off
+		    ContentPreviewEnabled   on
+		    System {
+		    Name		    "Desired Yaw Rate Generator"
+		    Location		    [-8, -8, 1928, 1048]
+		    Open		    off
+		    PortBlocksUseCompactNotation off
+		    SetExecutionDomain	    off
+		    ExecutionDomainType	    "Deduce"
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "125"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Linear Car Velocity"
+		    SID			    "2283"
+		    Position		    [250, 48, 280, 62]
+		    ZOrder		    16
+		    BackgroundColor	    "orange"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "steering angle"
+		    SID			    "2284"
+		    Position		    [250, 98, 280, 112]
+		    ZOrder		    17
+		    BackgroundColor	    "orange"
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Add"
+		    SID			    "2411"
+		    Ports		    [3, 1]
+		    Position		    [590, 194, 625, 266]
+		    ZOrder		    264
+		    Inputs		    "+++"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant"
+		    SID			    "2285"
+		    Position		    [250, 190, 280, 220]
+		    ZOrder		    19
+		    Value		    "Lf"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant1"
+		    SID			    "2286"
+		    Position		    [250, 140, 280, 170]
+		    ZOrder		    15
+		    Value		    "ku"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant2"
+		    SID			    "2287"
+		    Position		    [250, 240, 280, 270]
+		    ZOrder		    20
+		    Value		    "Lr"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Define CM Dict"
+		    SID			    "2407"
+		    Ports		    []
+		    Position		    [830, -105, 925, -80]
+		    ZOrder		    21
+		    BackgroundColor	    "orange"
+		    LibraryVersion	    "1.493"
+		    SourceBlock		    "CarMaker4SL/Define CM Dict"
+		    SourceType		    "Define CarMaker Dictionary Variable"
+		    SourceProductName	    "CarMaker4SL"
+		    MultiThreadCoSim	    "auto"
+		    xname		    "desYaw_denom"
+		    xmono		    off
+		    xtype		    "Double4"
+		    xdvaplace		    "None"
+		    xnstates		    "0"
+		    xfirststate		    "0"
+		    xinitial		    "0"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Define CM Dict1"
+		    SID			    "2415"
+		    Ports		    []
+		    Position		    [845, -145, 915, -125]
+		    ZOrder		    268
+		    BackgroundColor	    "orange"
+		    LibraryVersion	    "1.493"
+		    SourceBlock		    "CarMaker4SL/Define CM Dict"
+		    SourceType		    "Define CarMaker Dictionary Variable"
+		    SourceProductName	    "CarMaker4SL"
+		    MultiThreadCoSim	    "auto"
+		    xname		    "desYaw_num"
+		    xmono		    off
+		    xtype		    "Double4"
+		    xdvaplace		    "None"
+		    xnstates		    "0"
+		    xfirststate		    "0"
+		    xinitial		    "0"
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Divide"
+		    SID			    "2416"
+		    Ports		    [2, 1]
+		    Position		    [695, 122, 725, 153]
+		    ZOrder		    269
+		    Inputs		    "*/"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Multiply"
+		    SID			    "2409"
+		    Ports		    [2, 1]
+		    Position		    [505, 157, 535, 188]
+		    ZOrder		    179
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Multiply1"
+		    SID			    "2413"
+		    Ports		    [2, 1]
+		    Position		    [590, -8, 620, 23]
+		    ZOrder		    266
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Math
+		    Name		    "Square"
+		    SID			    "2410"
+		    Ports		    [1, 1]
+		    Position		    [440, 165, 470, 195]
+		    ZOrder		    263
+		    Operator		    "square"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Desired Yaw Rate"
+		    SID			    "2289"
+		    Position		    [790, 133, 820, 147]
+		    ZOrder		    18
+		    BackgroundColor	    "cyan"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    47
+		    SrcBlock		    "Constant1"
+		    SrcPort		    1
+		    Points		    [203, 0; 0, 10]
+		    DstBlock		    "Multiply"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    2
+		    SrcBlock		    "steering angle"
+		    SrcPort		    1
+		    Points		    [62, 0; 0, -90]
+		    DstBlock		    "Multiply1"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    53
+		    SrcBlock		    "Divide"
+		    SrcPort		    1
+		    DstBlock		    "Desired Yaw Rate"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    4
+		    SrcBlock		    "Linear Car Velocity"
+		    SrcPort		    1
+		    Points		    [34, 0]
+		    Branch {
+		    ZOrder		    46
+		    Points		    [0, 125]
+		    DstBlock		    "Square"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    45
+		    Points		    [16, 0; 0, -55]
+		    DstBlock		    "Multiply1"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    ZOrder		    13
+		    SrcBlock		    "Multiply"
+		    SrcPort		    1
+		    Points		    [34, 0; 0, 30]
+		    DstBlock		    "Add"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    51
+		    SrcBlock		    "Multiply1"
+		    SrcPort		    1
+		    Points		    [33, 0; 0, 120]
+		    DstBlock		    "Divide"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    48
+		    SrcBlock		    "Square"
+		    SrcPort		    1
+		    DstBlock		    "Multiply"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    49
+		    SrcBlock		    "Constant"
+		    SrcPort		    1
+		    Points		    [160, 0; 0, 25]
+		    DstBlock		    "Add"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    50
+		    SrcBlock		    "Constant2"
+		    SrcPort		    1
+		    DstBlock		    "Add"
+		    DstPort		    3
+		    }
+		    Line {
+		    ZOrder		    52
+		    SrcBlock		    "Add"
+		    SrcPort		    1
+		    Points		    [30, 0; 0, -85]
+		    DstBlock		    "Divide"
+		    DstPort		    2
+		    }
+		    }
+		    }
+		    Block {
 		    BlockType		    Reference
 		    Name		    "PID Controller "
 		    SID			    "2281"
 		    Ports		    [5, 1]
-		    Position		    [-1135, 179, -945, 321]
+		    Position		    [-1050, -236, -860, -94]
 		    ZOrder		    309
 		    LibraryVersion	    "1.444"
 		    SourceBlock		    "simulink/Continuous/PID Controller"
@@ -14584,9 +15533,9 @@ Model {
 		    TrackingMode	    off
 		    Kt			    "1"
 		    LimitOutput		    on
-		    UpperSaturationLimit    "100"
-		    LowerSaturationLimit    "0"
-		    LinearizeAsGain	    on
+		    UpperSaturationLimit    "240"
+		    LowerSaturationLimit    "-240"
+		    LinearizeAsGain	    off
 		    AntiWindupMode	    "clamping"
 		    Kb			    "1"
 		    RndMeth		    "Floor"
@@ -14727,7 +15676,7 @@ Model {
 		    Name		    "Product1"
 		    SID			    "2251"
 		    Ports		    [2, 1]
-		    Position		    [-1245, -338, -1215, -307]
+		    Position		    [-1160, -753, -1130, -722]
 		    ZOrder		    23
 		    ShowName		    off
 		    InputSameDT		    off
@@ -14739,10 +15688,15 @@ Model {
 		    Name		    "Reference Yaw Rate Limiter"
 		    SID			    "2326"
 		    Ports		    [2, 1]
-		    Position		    [-1120, -36, -960, 51]
+		    Position		    [-1250, -451, -1090, -364]
 		    ZOrder		    26226
 		    RequestExecContextInheritance off
 		    ContentPreviewEnabled   on
+		    Port {
+		    PortNumber		    1
+		    Name		    "Reference Yaw Rate"
+		    PropagatedSignals	    "Reference Yaw Rate"
+		    }
 		    System {
 		    Name		    "Reference Yaw Rate Limiter"
 		    Location		    [-8, -8, 1928, 1048]
@@ -14760,15 +15714,19 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "100"
+		    ZoomFactor		    "175"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Vehicle.v"
 		    SID			    "2340"
-		    Position		    [-30, -107, 0, -93]
+		    Position		    [-30, -122, 0, -108]
 		    ZOrder		    26238
 		    BackgroundColor	    "orange"
 		    IconDisplay		    "Port number"
+		    Port {
+		    PortNumber		    1
+		    PropagatedSignals	    "Vehicle Velocity"
+		    }
 		    }
 		    Block {
 		    BlockType		    Inport
@@ -14785,7 +15743,7 @@ Model {
 		    Name		    "Add"
 		    SID			    "2333"
 		    Ports		    [2, 1]
-		    Position		    [-250, -212, -225, -148]
+		    Position		    [-250, -222, -225, -158]
 		    ZOrder		    26231
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -14795,17 +15753,46 @@ Model {
 		    BlockType		    Constant
 		    Name		    "Constant"
 		    SID			    "2335"
-		    Position		    [-195, -150, -165, -120]
+		    Position		    [-195, -160, -165, -130]
 		    ZOrder		    26233
 		    BlockRotation	    270
 		    Value		    "2"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant1"
+		    SID			    "2420"
+		    Position		    [40, -95, 70, -65]
+		    ZOrder		    26244
+		    Value		    "0"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Define CM Dict"
+		    SID			    "2417"
+		    Ports		    []
+		    Position		    [425, -245, 495, -225]
+		    ZOrder		    26241
+		    BackgroundColor	    "orange"
+		    LibraryVersion	    "1.493"
+		    SourceBlock		    "CarMaker4SL/Define CM Dict"
+		    SourceType		    "Define CarMaker Dictionary Variable"
+		    SourceProductName	    "CarMaker4SL"
+		    MultiThreadCoSim	    "auto"
+		    xname		    "maxYawRate"
+		    xmono		    off
+		    xtype		    "Double4"
+		    xdvaplace		    "None"
+		    xnstates		    "0"
+		    xfirststate		    "0"
+		    xinitial		    "0"
 		    }
 		    Block {
 		    BlockType		    Product
 		    Name		    "Divide"
 		    SID			    "2334"
 		    Ports		    [2, 1]
-		    Position		    [-130, -188, -100, -157]
+		    Position		    [-130, -198, -100, -167]
 		    ZOrder		    26232
 		    Inputs		    "*/"
 		    InputSameDT		    off
@@ -14822,7 +15809,7 @@ Model {
 		    Name		    "Divide1"
 		    SID			    "2338"
 		    Ports		    [2, 1]
-		    Position		    [50, -168, 80, -137]
+		    Position		    [40, -178, 70, -147]
 		    ZOrder		    26236
 		    Inputs		    "*/"
 		    InputSameDT		    off
@@ -14835,7 +15822,7 @@ Model {
 		    Name		    "MATLAB Function"
 		    SID			    "2342"
 		    Ports		    [2, 1]
-		    Position		    [265, -63, 355, 48]
+		    Position		    [335, -63, 425, 48]
 		    ZOrder		    26240
 		    ErrorFcn		    "Stateflow.Translate.translate"
 		    PermitHierarchicalResolution "ExplicitOnly"
@@ -14970,7 +15957,7 @@ Model {
 		    Name		    "Multiply"
 		    SID			    "2337"
 		    Ports		    [2, 1]
-		    Position		    [-30, -178, 0, -147]
+		    Position		    [-30, -188, 0, -157]
 		    ZOrder		    26235
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -14982,7 +15969,7 @@ Model {
 		    Name		    "Multiply1"
 		    SID			    "2341"
 		    Ports		    [2, 1]
-		    Position		    [120, -158, 150, -127]
+		    Position		    [225, -158, 255, -127]
 		    ZOrder		    26239
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -14998,7 +15985,7 @@ Model {
 		    Name		    "Read CM Dict"
 		    SID			    "2331"
 		    Ports		    [0, 1]
-		    Position		    [-360, -205, -290, -185]
+		    Position		    [-360, -215, -290, -195]
 		    ZOrder		    26229
 		    BackgroundColor	    "orange"
 		    LibraryVersion	    "1.493"
@@ -15014,7 +16001,7 @@ Model {
 		    Name		    "Read CM Dict1"
 		    SID			    "2332"
 		    Ports		    [0, 1]
-		    Position		    [-360, -175, -290, -155]
+		    Position		    [-360, -185, -290, -165]
 		    ZOrder		    26230
 		    BackgroundColor	    "orange"
 		    LibraryVersion	    "1.493"
@@ -15026,17 +16013,74 @@ Model {
 		    xsync		    off
 		    }
 		    Block {
+		    BlockType		    Saturate
+		    Name		    "Saturation"
+		    SID			    "2421"
+		    Ports		    [1, 1]
+		    Position		    [155, 5, 185, 35]
+		    ZOrder		    26245
+		    InputPortMap	    "u0"
+		    UpperLimit		    "10"
+		    LowerLimit		    "-10"
+		    Port {
+		    PortNumber		    1
+		    }
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "Switch"
+		    SID			    "2419"
+		    Position		    [120, -166, 165, -134]
+		    ZOrder		    26243
+		    Criteria		    "u2 > Threshold"
+		    Threshold		    "1"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
 		    BlockType		    Constant
 		    Name		    "Tunability Factor"
 		    SID			    "2330"
-		    Position		    [65, -95, 95, -65]
+		    Position		    [135, -95, 165, -65]
 		    ZOrder		    26228
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Write CM Dict"
+		    SID			    "2418"
+		    Ports		    [1]
+		    Position		    [345, -150, 415, -130]
+		    ZOrder		    26242
+		    BackgroundColor	    "orange"
+		    LibraryVersion	    "1.493"
+		    SourceBlock		    "CarMaker4SL/Write CM Dict"
+		    SourceType		    "Write CarMaker Dictionary Variable(s)"
+		    SourceProductName	    "CarMaker4SL"
+		    MultiThreadCoSim	    "auto"
+		    xname		    "maxYawRate"
+		    xsync		    off
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Write CM Dict1"
+		    SID			    "2406"
+		    Ports		    [1]
+		    Position		    [250, 30, 320, 50]
+		    ZOrder		    26246
+		    BackgroundColor	    "orange"
+		    LibraryVersion	    "1.493"
+		    SourceBlock		    "CarMaker4SL/Write CM Dict"
+		    SourceType		    "Write CarMaker Dictionary Variable(s)"
+		    SourceProductName	    "CarMaker4SL"
+		    MultiThreadCoSim	    "auto"
+		    xname		    "DesYawRate"
+		    xsync		    off
 		    }
 		    Block {
 		    BlockType		    Constant
 		    Name		    "g"
 		    SID			    "2336"
-		    Position		    [-95, -130, -65, -100]
+		    Position		    [-95, -140, -65, -110]
 		    ZOrder		    26234
 		    BlockRotation	    270
 		    NamePlacement	    "alternate"
@@ -15046,7 +16090,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "Reference Yaw Rate"
 		    SID			    "2328"
-		    Position		    [530, -12, 560, 2]
+		    Position		    [600, -12, 630, 2]
 		    ZOrder		    26226
 		    BackgroundColor	    "cyan"
 		    IconDisplay		    "Port number"
@@ -15055,8 +16099,8 @@ Model {
 		    ZOrder		    248
 		    SrcBlock		    "Desired Yaw Rate"
 		    SrcPort		    1
-		    DstBlock		    "MATLAB Function"
-		    DstPort		    2
+		    DstBlock		    "Saturation"
+		    DstPort		    1
 		    }
 		    Line {
 		    Name		    "Reference Yaw Rate"
@@ -15116,16 +16160,18 @@ Model {
 		    ZOrder		    229
 		    SrcBlock		    "Vehicle.v"
 		    SrcPort		    1
-		    Points		    [20, 0; 0, -45]
+		    Points		    [20, 0]
+		    Branch {
+		    ZOrder		    270
+		    Points		    [63, 0; 0, -35]
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		    }
+		    Branch {
+		    ZOrder		    269
 		    DstBlock		    "Divide1"
 		    DstPort		    2
 		    }
-		    Line {
-		    ZOrder		    230
-		    SrcBlock		    "Divide1"
-		    SrcPort		    1
-		    DstBlock		    "Multiply1"
-		    DstPort		    1
 		    }
 		    Line {
 		    ZOrder		    233
@@ -15139,19 +16185,67 @@ Model {
 		    ZOrder		    234
 		    SrcBlock		    "Tunability Factor"
 		    SrcPort		    1
-		    Points		    [5, 0]
+		    Points		    [24, 0; 0, -55]
 		    DstBlock		    "Multiply1"
 		    DstPort		    2
 		    }
 		    Line {
 		    Name		    "Max Yaw Rate"
 		    ZOrder		    247
-		    Labels		    [2, 1]
 		    SrcBlock		    "Multiply1"
 		    SrcPort		    1
-		    Points		    [65, 0; 0, 105]
+		    Points		    [30, 0]
+		    Branch {
+		    ZOrder		    266
+		    DstBlock		    "Write CM Dict"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    265
+		    Labels		    [1, 1]
+		    Points		    [0, 105]
 		    DstBlock		    "MATLAB Function"
 		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    ZOrder		    268
+		    SrcBlock		    "Divide1"
+		    SrcPort		    1
+		    DstBlock		    "Switch"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    272
+		    SrcBlock		    "Constant1"
+		    SrcPort		    1
+		    Points		    [30, 0]
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		    }
+		    Line {
+		    ZOrder		    273
+		    SrcBlock		    "Switch"
+		    SrcPort		    1
+		    DstBlock		    "Multiply1"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    274
+		    SrcBlock		    "Saturation"
+		    SrcPort		    1
+		    Points		    [40, 0]
+		    Branch {
+		    ZOrder		    276
+		    Points		    [0, 20]
+		    DstBlock		    "Write CM Dict1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    275
+		    DstBlock		    "MATLAB Function"
+		    DstPort		    2
+		    }
 		    }
 		    Annotation {
 		    SID			    "2344"
@@ -15163,6 +16257,7 @@ Model {
 		    FixedWidth		    on
 		    HorizontalAlignment	    "left"
 		    VerticalAlignment	    "top"
+		    ZOrder		    -1
 		    }
 		    Annotation {
 		    SID			    "2343"
@@ -15180,19 +16275,23 @@ Model {
 		    Name		    "Subtract"
 		    SID			    "2290"
 		    Ports		    [2, 1]
-		    Position		    [-1280, 172, -1250, 203]
+		    Position		    [-1195, -243, -1165, -212]
 		    ZOrder		    311
 		    Inputs		    "+-"
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "Yaw Rate Error"
+		    }
 		    }
 		    Block {
 		    BlockType		    Sum
 		    Name		    "Sum"
 		    SID			    "2252"
 		    Ports		    [2, 1]
-		    Position		    [-1590, -370, -1570, -350]
+		    Position		    [-1505, -785, -1485, -765]
 		    ZOrder		    12
 		    ShowName		    off
 		    IconShape		    "round"
@@ -15206,7 +16305,7 @@ Model {
 		    Name		    "Torque Distribution"
 		    SID			    "2314"
 		    Ports		    [4, 4]
-		    Position		    [-755, -99, -540, 74]
+		    Position		    [-670, -558, -455, -337]
 		    ZOrder		    26222
 		    RequestExecContextInheritance off
 		    ContentPreviewEnabled   on
@@ -15227,7 +16326,7 @@ Model {
 		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
-		    ZoomFactor		    "80"
+		    ZoomFactor		    "125"
 		    Block {
 		    BlockType		    Inport
 		    Name		    "Propulsion Torque"
@@ -15235,6 +16334,22 @@ Model {
 		    Position		    [-70, 58, -40, 72]
 		    ZOrder		    26222
 		    IconDisplay		    "Port number"
+		    Port {
+		    PortNumber		    1
+		    PropagatedSignals	    "Propulsion Torque"
+		    }
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Steer Angle"
+		    SID			    "2395"
+		    Position		    [-70, 168, -40, 182]
+		    ZOrder		    26245
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    Port {
+		    PortNumber		    1
+		    }
 		    }
 		    Block {
 		    BlockType		    Inport
@@ -15242,15 +16357,6 @@ Model {
 		    SID			    "2316"
 		    Position		    [530, 108, 560, 122]
 		    ZOrder		    26223
-		    Port		    "2"
-		    IconDisplay		    "Port number"
-		    }
-		    Block {
-		    BlockType		    Inport
-		    Name		    "Reference Yaw Rate"
-		    SID			    "2317"
-		    Position		    [-70, 173, -40, 187]
-		    ZOrder		    26224
 		    Port		    "3"
 		    IconDisplay		    "Port number"
 		    }
@@ -15258,10 +16364,14 @@ Model {
 		    BlockType		    Inport
 		    Name		    "Delta Torque command"
 		    SID			    "2318"
-		    Position		    [-70, 258, -40, 272]
+		    Position		    [-85, 258, -55, 272]
 		    ZOrder		    26225
 		    Port		    "4"
 		    IconDisplay		    "Port number"
+		    Port {
+		    PortNumber		    1
+		    PropagatedSignals	    "Delta Torque command"
+		    }
 		    }
 		    Block {
 		    BlockType		    Gain
@@ -15282,7 +16392,7 @@ Model {
 		    Name		    "Add"
 		    SID			    "2302"
 		    Ports		    [2, 1]
-		    Position		    [455, 172, 485, 203]
+		    Position		    [455, 167, 485, 198]
 		    ZOrder		    26213
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
@@ -15303,7 +16413,7 @@ Model {
 		    BlockType		    Constant
 		    Name		    "Constant"
 		    SID			    "2296"
-		    Position		    [15, 300, 45, 330]
+		    Position		    [0, 300, 30, 330]
 		    ZOrder		    26208
 		    BlockRotation	    270
 		    Value		    "2"
@@ -15313,7 +16423,7 @@ Model {
 		    Name		    "Delta Torque Splitter"
 		    SID			    "2301"
 		    Ports		    [2, 2]
-		    Position		    [165, 130, 275, 325]
+		    Position		    [165, 127, 295, 323]
 		    ZOrder		    26212
 		    ErrorFcn		    "Stateflow.Translate.translate"
 		    PermitHierarchicalResolution "ExplicitOnly"
@@ -15321,6 +16431,16 @@ Model {
 		    RequestExecContextInheritance off
 		    SFBlockType		    "MATLAB Function"
 		    ContentPreviewEnabled   on
+		    Port {
+		    PortNumber		    1
+		    Name		    "RL_Overlay_Trq"
+		    PropagatedSignals	    "Trq_RL"
+		    }
+		    Port {
+		    PortNumber		    2
+		    Name		    "RR_Overlay_Trq"
+		    PropagatedSignals	    "Trq_RR"
+		    }
 		    System {
 		    Name		    "Delta Torque Splitter"
 		    Location		    [223, 338, 826, 833]
@@ -15339,13 +16459,13 @@ Model {
 		    TiledPageScale	    1
 		    ShowPageBoundaries	    off
 		    ZoomFactor		    "100"
-		    SIDHighWatermark	    "23"
+		    SIDHighWatermark	    "24"
 		    Block {
 		    BlockType		    Inport
-		    Name		    "moment_direction"
-		    SID			    "2301::1"
+		    Name		    "steer_ang"
+		    SID			    "2301::24"
 		    Position		    [20, 101, 40, 119]
-		    ZOrder		    -1
+		    ZOrder		    15
 		    IconDisplay		    "Port number"
 		    }
 		    Block {
@@ -15413,23 +16533,22 @@ Model {
 		    IconDisplay		    "Port number"
 		    }
 		    Line {
-		    ZOrder		    14
-		    SrcBlock		    "moment_direction"
+		    ZOrder		    40
+		    SrcBlock		    "steer_ang"
 		    SrcPort		    1
 		    DstBlock		    " SFunction "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    15
+		    ZOrder		    41
 		    SrcBlock		    "half_delta_Trq"
 		    SrcPort		    1
-		    Points		    [120, 0]
 		    DstBlock		    " SFunction "
 		    DstPort		    2
 		    }
 		    Line {
 		    Name		    "Trq_RL"
-		    ZOrder		    16
+		    ZOrder		    42
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    2
@@ -15438,7 +16557,7 @@ Model {
 		    }
 		    Line {
 		    Name		    "Trq_RR"
-		    ZOrder		    17
+		    ZOrder		    43
 		    Labels		    [0, 0]
 		    SrcBlock		    " SFunction "
 		    SrcPort		    3
@@ -15446,14 +16565,14 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    18
+		    ZOrder		    44
 		    SrcBlock		    " Demux "
 		    SrcPort		    1
 		    DstBlock		    " Terminator "
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    19
+		    ZOrder		    45
 		    SrcBlock		    " SFunction "
 		    SrcPort		    1
 		    DstBlock		    " Demux "
@@ -15466,13 +16585,17 @@ Model {
 		    Name		    "Divide"
 		    SID			    "2295"
 		    Ports		    [2, 1]
-		    Position		    [70, 257, 100, 288]
+		    Position		    [55, 257, 85, 288]
 		    ZOrder		    26207
 		    Inputs		    "*/"
 		    InputSameDT		    off
 		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
 		    RndMeth		    "Floor"
 		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "half_deltaT"
+		    }
 		    }
 		    Block {
 		    BlockType		    Gain
@@ -15503,11 +16626,48 @@ Model {
 		    SaturateOnIntegerOverflow off
 		    }
 		    Block {
-		    BlockType		    Signum
-		    Name		    "Sign"
-		    SID			    "2298"
-		    Position		    [70, 165, 100, 195]
-		    ZOrder		    26209
+		    BlockType		    Saturate
+		    Name		    "Saturation1"
+		    SID			    "2371"
+		    Ports		    [1, 1]
+		    Position		    [745, 390, 775, 420]
+		    ZOrder		    26240
+		    InputPortMap	    "u0"
+		    UpperLimit		    "0"
+		    LowerLimit		    "-240"
+		    }
+		    Block {
+		    BlockType		    Saturate
+		    Name		    "Saturation2"
+		    SID			    "2372"
+		    Ports		    [1, 1]
+		    Position		    [745, 285, 775, 315]
+		    ZOrder		    26244
+		    InputPortMap	    "u0"
+		    UpperLimit		    "240"
+		    LowerLimit		    "0"
+		    }
+		    Block {
+		    BlockType		    Saturate
+		    Name		    "Saturation3"
+		    SID			    "2368"
+		    Ports		    [1, 1]
+		    Position		    [745, 495, 775, 525]
+		    ZOrder		    26239
+		    InputPortMap	    "u0"
+		    UpperLimit		    "0"
+		    LowerLimit		    "-240"
+		    }
+		    Block {
+		    BlockType		    Saturate
+		    Name		    "Saturation4"
+		    SID			    "2373"
+		    Ports		    [1, 1]
+		    Position		    [745, 185, 775, 215]
+		    ZOrder		    26243
+		    InputPortMap	    "u0"
+		    UpperLimit		    "240"
+		    LowerLimit		    "0"
 		    }
 		    Block {
 		    BlockType		    Switch
@@ -15518,16 +16678,24 @@ Model {
 		    Criteria		    "u2 > Threshold"
 		    InputSameDT		    off
 		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "RR Drive Trq"
+		    }
 		    }
 		    Block {
 		    BlockType		    Switch
 		    Name		    "Switch1"
 		    SID			    "2305"
-		    Position		    [625, 185, 675, 225]
+		    Position		    [625, 180, 675, 220]
 		    ZOrder		    26216
 		    Criteria		    "u2 > Threshold"
 		    InputSameDT		    off
 		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "RL Drive Trq"
+		    }
 		    }
 		    Block {
 		    BlockType		    Switch
@@ -15553,7 +16721,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "PT.WRL.Trq_Drive"
 		    SID			    "2319"
-		    Position		    [765, 198, 795, 212]
+		    Position		    [865, 193, 895, 207]
 		    ZOrder		    26226
 		    BackgroundColor	    "cyan"
 		    IconDisplay		    "Port number"
@@ -15562,7 +16730,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "PT.WRR.Trq_Drive"
 		    SID			    "2320"
-		    Position		    [765, 293, 795, 307]
+		    Position		    [865, 293, 895, 307]
 		    ZOrder		    26227
 		    BackgroundColor	    "cyan"
 		    Port		    "2"
@@ -15572,7 +16740,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "PT.WRL.Trq_Supp2WC"
 		    SID			    "2321"
-		    Position		    [765, 398, 795, 412]
+		    Position		    [865, 398, 895, 412]
 		    ZOrder		    26228
 		    BackgroundColor	    "cyan"
 		    Port		    "3"
@@ -15582,7 +16750,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "PT.WRR.Trq_Supp2WC"
 		    SID			    "2322"
-		    Position		    [765, 503, 795, 517]
+		    Position		    [865, 503, 895, 517]
 		    ZOrder		    26229
 		    BackgroundColor	    "cyan"
 		    Port		    "4"
@@ -15619,18 +16787,20 @@ Model {
 		    SrcPort		    1
 		    Points		    [60, 0]
 		    Branch {
+		    ZOrder		    234
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		    }
+		    Branch {
 		    ZOrder		    133
 		    DstBlock		    "Switch1"
 		    DstPort		    1
 		    }
-		    Branch {
-		    ZOrder		    132
-		    DstBlock		    "Gain"
-		    DstPort		    1
-		    }
 		    }
 		    Line {
+		    Name		    "half_deltaT"
 		    ZOrder		    75
+		    Labels		    [1, 1]
 		    SrcBlock		    "Divide"
 		    SrcPort		    1
 		    DstBlock		    "Delta Torque Splitter"
@@ -15640,18 +16810,13 @@ Model {
 		    ZOrder		    140
 		    SrcBlock		    "Propulsion Torque"
 		    SrcPort		    1
-		    Points		    [400, 0; 0, 130]
+		    Points		    [400, 0; 0, 125]
 		    Branch {
-		    ZOrder		    88
+		    ZOrder		    232
 		    Points		    [0, 25]
 		    Branch {
-		    ZOrder		    93
-		    DstBlock		    "Switch1"
-		    DstPort		    3
-		    }
-		    Branch {
-		    ZOrder		    92
-		    Points		    [0, 70]
+		    ZOrder		    235
+		    Points		    [0, 75]
 		    Branch {
 		    ZOrder		    98
 		    Points		    [0, 25]
@@ -15672,6 +16837,11 @@ Model {
 		    DstPort		    2
 		    }
 		    }
+		    Branch {
+		    ZOrder		    93
+		    DstBlock		    "Switch1"
+		    DstPort		    3
+		    }
 		    }
 		    Branch {
 		    ZOrder		    87
@@ -15683,15 +16853,10 @@ Model {
 		    ZOrder		    141
 		    SrcBlock		    "TV Enable"
 		    SrcPort		    1
-		    Points		    [26, 0; 0, 90]
+		    Points		    [26, 0; 0, 85]
 		    Branch {
-		    ZOrder		    106
-		    DstBlock		    "Switch1"
-		    DstPort		    2
-		    }
-		    Branch {
-		    ZOrder		    104
-		    Points		    [0, 95]
+		    ZOrder		    233
+		    Points		    [0, 100]
 		    Branch {
 		    ZOrder		    125
 		    DstBlock		    "Switch"
@@ -15713,13 +16878,11 @@ Model {
 		    }
 		    }
 		    }
+		    Branch {
+		    ZOrder		    106
+		    DstBlock		    "Switch1"
+		    DstPort		    2
 		    }
-		    Line {
-		    ZOrder		    145
-		    SrcBlock		    "Switch"
-		    SrcPort		    1
-		    DstBlock		    "PT.WRR.Trq_Drive"
-		    DstPort		    1
 		    }
 		    Line {
 		    ZOrder		    143
@@ -15729,24 +16892,12 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    147
-		    SrcBlock		    "Switch3"
-		    SrcPort		    1
-		    DstBlock		    "PT.WRR.Trq_Supp2WC"
-		    DstPort		    1
-		    }
-		    Line {
+		    Name		    "RL_Overlay_Trq"
 		    ZOrder		    79
+		    Labels		    [1, 1]
 		    SrcBlock		    "Delta Torque Splitter"
 		    SrcPort		    1
 		    DstBlock		    "Add"
-		    DstPort		    1
-		    }
-		    Line {
-		    ZOrder		    144
-		    SrcBlock		    "Switch1"
-		    SrcPort		    1
-		    DstBlock		    "PT.WRL.Trq_Drive"
 		    DstPort		    1
 		    }
 		    Line {
@@ -15766,13 +16917,6 @@ Model {
 		    }
 		    }
 		    Line {
-		    ZOrder		    76
-		    SrcBlock		    "Sign"
-		    SrcPort		    1
-		    DstBlock		    "Delta Torque Splitter"
-		    DstPort		    1
-		    }
-		    Line {
 		    ZOrder		    70
 		    SrcBlock		    "Constant"
 		    SrcPort		    1
@@ -15781,7 +16925,9 @@ Model {
 		    DstPort		    2
 		    }
 		    Line {
+		    Name		    "RR_Overlay_Trq"
 		    ZOrder		    111
+		    Labels		    [1, 1]
 		    SrcBlock		    "Delta Torque Splitter"
 		    SrcPort		    2
 		    DstBlock		    "Add1"
@@ -15796,18 +16942,80 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    146
+		    ZOrder		    216
+		    SrcBlock		    "Switch3"
+		    SrcPort		    1
+		    DstBlock		    "Saturation3"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    217
+		    SrcBlock		    "Saturation3"
+		    SrcPort		    1
+		    DstBlock		    "PT.WRR.Trq_Supp2WC"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "RL Drive Trq"
+		    ZOrder		    224
+		    Labels		    [1, 1]
+		    SrcBlock		    "Switch1"
+		    SrcPort		    1
+		    DstBlock		    "Saturation4"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "RR Drive Trq"
+		    ZOrder		    225
+		    Labels		    [1, 1]
+		    SrcBlock		    "Switch"
+		    SrcPort		    1
+		    DstBlock		    "Saturation2"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    222
 		    SrcBlock		    "Switch2"
+		    SrcPort		    1
+		    DstBlock		    "Saturation1"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    223
+		    SrcBlock		    "Saturation1"
 		    SrcPort		    1
 		    DstBlock		    "PT.WRL.Trq_Supp2WC"
 		    DstPort		    1
 		    }
 		    Line {
-		    ZOrder		    142
-		    SrcBlock		    "Reference Yaw Rate"
+		    ZOrder		    226
+		    SrcBlock		    "Saturation4"
 		    SrcPort		    1
-		    DstBlock		    "Sign"
+		    DstBlock		    "PT.WRL.Trq_Drive"
 		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    227
+		    SrcBlock		    "Saturation2"
+		    SrcPort		    1
+		    DstBlock		    "PT.WRR.Trq_Drive"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    228
+		    SrcBlock		    "Steer Angle"
+		    SrcPort		    1
+		    DstBlock		    "Delta Torque Splitter"
+		    DstPort		    1
+		    }
+		    Annotation {
+		    SID			    "2370"
+		    Name		    "With no saturation\nTV - 40.54\nnoTV - 40.52\n"
+		    Position		    [-729, 30, -647, 80]
+		    InternalMargins	    [0, 0, 0, 0]
+		    HorizontalAlignment	    "left"
+		    VerticalAlignment	    "top"
+		    ZOrder		    -1
 		    }
 		    Annotation {
 		    SID			    "2311"
@@ -15820,7 +17028,7 @@ Model {
 		    "	Pass Generated Torque + Additive TV Torque to output<br />else</span></p>\n<p style=\" margin-top:0px; margin-b"
 		    "ottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14"
 		    "px;\">	Pass Generated Torque to output (same for both wheels)</span></p></body></html>"
-		    Position		    [439, 10, 812, 76]
+		    Position		    [-719, -163, -346, -97]
 		    InternalMargins	    [0, 0, 0, 0]
 		    HorizontalAlignment	    "left"
 		    VerticalAlignment	    "top"
@@ -15837,7 +17045,7 @@ Model {
 		    " margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><s"
 		    "pan style=\" font-size:12px;\">dunno what this means but it was set to just the negative value of whatever the d"
 		    "rive torque in the example</span></p></body></html>"
-		    Position		    [467, 621, 1034, 651]
+		    Position		    [-996, -47, -429, -17]
 		    InternalMargins	    [0, 0, 0, 0]
 		    HorizontalAlignment	    "left"
 		    VerticalAlignment	    "top"
@@ -15847,10 +17055,782 @@ Model {
 		    }
 		    }
 		    Block {
+		    BlockType		    Reference
+		    Name		    "Write CM Dict"
+		    SID			    "2385"
+		    Ports		    [1]
+		    Position		    [-990, -345, -920, -325]
+		    ZOrder		    26233
+		    BackgroundColor	    "orange"
+		    LibraryVersion	    "1.493"
+		    SourceBlock		    "CarMaker4SL/Write CM Dict"
+		    SourceType		    "Write CarMaker Dictionary Variable(s)"
+		    SourceProductName	    "CarMaker4SL"
+		    MultiThreadCoSim	    "auto"
+		    xname		    "RefYawRate"
+		    xsync		    off
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Write CM Dict1"
+		    SID			    "2442"
+		    Ports		    [1]
+		    Position		    [-990, -290, -920, -270]
+		    ZOrder		    26244
+		    BackgroundColor	    "orange"
+		    LibraryVersion	    "1.493"
+		    SourceBlock		    "CarMaker4SL/Write CM Dict"
+		    SourceType		    "Write CarMaker Dictionary Variable(s)"
+		    SourceProductName	    "CarMaker4SL"
+		    MultiThreadCoSim	    "auto"
+		    xname		    "YawRateError"
+		    xsync		    off
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "ts_18 Gain Scheduler\n(PIDN Lookup)"
+		    SID			    "2345"
+		    Ports		    [1, 1]
+		    Position		    [-3100, -623, -3005, -567]
+		    ZOrder		    26231
+		    RequestExecContextInheritance off
+		    ContentPreviewEnabled   on
+		    Port {
+		    PortNumber		    1
+		    Name		    "PID Gains + Filter Coeff N"
+		    }
+		    System {
+		    Name		    "ts_18 Gain Scheduler\n(PIDN Lookup)"
+		    Location		    [-8, -8, 1928, 1048]
+		    Open		    off
+		    PortBlocksUseCompactNotation off
+		    SetExecutionDomain	    off
+		    ExecutionDomainType	    "Deduce"
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "175"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Vhcl.v"
+		    SID			    "2346"
+		    Position		    [10, 173, 40, 187]
+		    ZOrder		    26207
+		    BackgroundColor	    "orange"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Kd Lookup"
+		    SID			    "2291"
+		    Ports		    [1, 1]
+		    Position		    [205, 188, 270, 252]
+		    ZOrder		    26205
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[0,0,0,0,0,-0.40505,-0.50277,-1.0544]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Ki Lookup"
+		    SID			    "2292"
+		    Ports		    [1, 1]
+		    Position		    [205, 103, 270, 167]
+		    ZOrder		    26204
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[37865.65,10454.7184,5331.6587,8450.1199,7889.3391,7361.3561,6813.2147,6310.914]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Kp Lookup"
+		    SID			    "2293"
+		    Ports		    [1, 1]
+		    Position		    [205, 18, 270, 82]
+		    ZOrder		    26203
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[0,0,0,127.0119,171.5424,208.4617,225.764,251.3245]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux"
+		    SID			    "2351"
+		    Ports		    [4, 1]
+		    Position		    [430, 3, 435, 352]
+		    ZOrder		    26212
+		    ShowName		    off
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "N Lookup"
+		    SID			    "2294"
+		    Ports		    [1, 1]
+		    Position		    [205, 273, 270, 337]
+		    ZOrder		    26206
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[0,0,0,0,0,31.6952,27.1972,27.1927]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "PIDN Gains"
+		    SID			    "2347"
+		    Position		    [510, 173, 540, 187]
+		    ZOrder		    26213
+		    BackgroundColor	    "cyan"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    1
+		    SrcBlock		    "Kd Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    3
+		    }
+		    Line {
+		    ZOrder		    2
+		    SrcBlock		    "Vhcl.v"
+		    SrcPort		    1
+		    Points		    [20, 0]
+		    Branch {
+		    ZOrder		    3
+		    Points		    [0, 40]
+		    Branch {
+		    ZOrder		    4
+		    Points		    [0, 85]
+		    DstBlock		    "N Lookup"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    5
+		    DstBlock		    "Kd Lookup"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    ZOrder		    6
+		    Points		    [0, -45]
+		    Branch {
+		    ZOrder		    7
+		    Points		    [0, -85]
+		    DstBlock		    "Kp Lookup"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    8
+		    DstBlock		    "Ki Lookup"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Line {
+		    ZOrder		    9
+		    SrcBlock		    "Ki Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    10
+		    SrcBlock		    "Kp Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    11
+		    SrcBlock		    "N Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    4
+		    }
+		    Line {
+		    ZOrder		    12
+		    SrcBlock		    "Mux"
+		    SrcPort		    1
+		    DstBlock		    "PIDN Gains"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "ts_18 Gain Scheduler\n(PIDN Lookup) v3 19sep"
+		    SID			    "2397"
+		    Ports		    [1, 1]
+		    Position		    [-3065, -903, -2970, -847]
+		    ZOrder		    26239
+		    RequestExecContextInheritance off
+		    ContentPreviewEnabled   on
+		    Port {
+		    PortNumber		    1
+		    Name		    "PID Gains + Filter Coeff N"
+		    }
+		    System {
+		    Name		    "ts_18 Gain Scheduler\n(PIDN Lookup) v3 19sep"
+		    Location		    [-8, -8, 1928, 1048]
+		    Open		    off
+		    PortBlocksUseCompactNotation off
+		    SetExecutionDomain	    off
+		    ExecutionDomainType	    "Deduce"
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "175"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Vhcl.v"
+		    SID			    "2398"
+		    Position		    [10, 173, 40, 187]
+		    ZOrder		    26207
+		    BackgroundColor	    "orange"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Kd Lookup"
+		    SID			    "2399"
+		    Ports		    [1, 1]
+		    Position		    [205, 188, 270, 252]
+		    ZOrder		    26205
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[0,0,0,0,0,-1.854,-1.907,-0.07946]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Ki Lookup"
+		    SID			    "2400"
+		    Ports		    [1, 1]
+		    Position		    [205, 103, 270, 167]
+		    ZOrder		    26204
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[67967.36,20046.34,10353.28,11261.09,10979.136,9397.25,9272.36,11112.25]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Kp Lookup"
+		    SID			    "2401"
+		    Ports		    [1, 1]
+		    Position		    [205, 18, 270, 82]
+		    ZOrder		    26203
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[0,0,0,49.142,124.61,186.37,233.8,316.28]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux"
+		    SID			    "2402"
+		    Ports		    [4, 1]
+		    Position		    [430, 3, 435, 352]
+		    ZOrder		    26212
+		    ShowName		    off
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "N Lookup"
+		    SID			    "2403"
+		    Ports		    [1, 1]
+		    Position		    [205, 273, 270, 337]
+		    ZOrder		    26206
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[100,100,100,100,100,25.58,33.73,3980.08]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "PIDN Gains"
+		    SID			    "2404"
+		    Position		    [510, 173, 540, 187]
+		    ZOrder		    26213
+		    BackgroundColor	    "cyan"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    1
+		    SrcBlock		    "Kd Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    3
+		    }
+		    Line {
+		    ZOrder		    2
+		    SrcBlock		    "Vhcl.v"
+		    SrcPort		    1
+		    Points		    [20, 0]
+		    Branch {
+		    ZOrder		    3
+		    Points		    [0, 40]
+		    Branch {
+		    ZOrder		    4
+		    Points		    [0, 85]
+		    DstBlock		    "N Lookup"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    5
+		    DstBlock		    "Kd Lookup"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    ZOrder		    6
+		    Points		    [0, -45]
+		    Branch {
+		    ZOrder		    7
+		    Points		    [0, -85]
+		    DstBlock		    "Kp Lookup"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    8
+		    DstBlock		    "Ki Lookup"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Line {
+		    ZOrder		    9
+		    SrcBlock		    "Ki Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    10
+		    SrcBlock		    "Kp Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    11
+		    SrcBlock		    "N Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    4
+		    }
+		    Line {
+		    ZOrder		    12
+		    SrcBlock		    "Mux"
+		    SrcPort		    1
+		    DstBlock		    "PIDN Gains"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "ts_18 Gain Scheduler\n(PIDN Lookup) v4 30sep"
+		    SID			    "2422"
+		    Ports		    [1, 1]
+		    Position		    [-3245, -888, -3150, -832]
+		    ZOrder		    26241
+		    RequestExecContextInheritance off
+		    ContentPreviewEnabled   on
+		    Port {
+		    PortNumber		    1
+		    Name		    "PID Gains + Filter Coeff N"
+		    }
+		    System {
+		    Name		    "ts_18 Gain Scheduler\n(PIDN Lookup) v4 30sep"
+		    Location		    [-8, -8, 1928, 1048]
+		    Open		    off
+		    PortBlocksUseCompactNotation off
+		    SetExecutionDomain	    off
+		    ExecutionDomainType	    "Deduce"
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "175"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Vhcl.v"
+		    SID			    "2423"
+		    Position		    [10, 173, 40, 187]
+		    ZOrder		    26207
+		    BackgroundColor	    "orange"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Kd Lookup"
+		    SID			    "2424"
+		    Ports		    [1, 1]
+		    Position		    [205, 188, 270, 252]
+		    ZOrder		    26205
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[0,0,0,0,-1.448,-1.64,-1.338,-0.0118]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Ki Lookup"
+		    SID			    "2425"
+		    Ports		    [1, 1]
+		    Position		    [205, 103, 270, 167]
+		    ZOrder		    26204
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[63229.9,17851.39,13470.54,13265.63,11578.53,10822.09,11363.02,12642.11]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Kp Lookup"
+		    SID			    "2426"
+		    Ports		    [1, 1]
+		    Position		    [205, 18, 270, 82]
+		    ZOrder		    26203
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[0,0,0,158.46,243.4,299.14,381.925,491.36]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux"
+		    SID			    "2427"
+		    Ports		    [4, 1]
+		    Position		    [430, 3, 435, 352]
+		    ZOrder		    26212
+		    ShowName		    off
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "N Lookup"
+		    SID			    "2428"
+		    Ports		    [1, 1]
+		    Position		    [205, 273, 270, 337]
+		    ZOrder		    26206
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[100,100,100,100,29.415,46.07,65.32,4156.54]"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "PIDN Gains"
+		    SID			    "2429"
+		    Position		    [510, 173, 540, 187]
+		    ZOrder		    26213
+		    BackgroundColor	    "cyan"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    1
+		    SrcBlock		    "Kd Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    3
+		    }
+		    Line {
+		    ZOrder		    2
+		    SrcBlock		    "Vhcl.v"
+		    SrcPort		    1
+		    Points		    [20, 0]
+		    Branch {
+		    ZOrder		    3
+		    Points		    [0, 40]
+		    Branch {
+		    ZOrder		    4
+		    Points		    [0, 85]
+		    DstBlock		    "N Lookup"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    5
+		    DstBlock		    "Kd Lookup"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    ZOrder		    6
+		    Points		    [0, -45]
+		    Branch {
+		    ZOrder		    7
+		    Points		    [0, -85]
+		    DstBlock		    "Kp Lookup"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    8
+		    DstBlock		    "Ki Lookup"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Line {
+		    ZOrder		    9
+		    SrcBlock		    "Ki Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    10
+		    SrcBlock		    "Kp Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    11
+		    SrcBlock		    "N Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    4
+		    }
+		    Line {
+		    ZOrder		    12
+		    SrcBlock		    "Mux"
+		    SrcPort		    1
+		    DstBlock		    "PIDN Gains"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
+		    BlockType		    SubSystem
+		    Name		    "ts_18 Gain Scheduler\nv5 30sept"
+		    SID			    "2430"
+		    Ports		    [1, 1]
+		    Position		    [-1465, -363, -1370, -307]
+		    ZOrder		    26242
+		    RequestExecContextInheritance off
+		    ContentPreviewEnabled   on
+		    Port {
+		    PortNumber		    1
+		    Name		    "PID+N Gains"
+		    }
+		    System {
+		    Name		    "ts_18 Gain Scheduler\nv5 30sept"
+		    Location		    [-8, -8, 1928, 1048]
+		    Open		    off
+		    PortBlocksUseCompactNotation off
+		    SetExecutionDomain	    off
+		    ExecutionDomainType	    "Deduce"
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "175"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Vhcl.v"
+		    SID			    "2431"
+		    Position		    [10, 173, 40, 187]
+		    ZOrder		    26207
+		    BackgroundColor	    "orange"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Kd Lookup"
+		    SID			    "2432"
+		    Ports		    [1, 1]
+		    Position		    [205, 188, 270, 252]
+		    ZOrder		    26205
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[0,0,-0.20986,-0.011634,-0.0122,-0.124,-0.354,1.574]"
+		    InterpMethod	    "Nearest"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Ki Lookup"
+		    SID			    "2433"
+		    Ports		    [1, 1]
+		    Position		    [205, 103, 270, 167]
+		    ZOrder		    26204
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[31091.94,5151.061,11790.96,12723.49,13436.937,14473.01,15655.76,17642.785]"
+		    InterpMethod	    "Nearest"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "Kp Lookup"
+		    SID			    "2434"
+		    Ports		    [1, 1]
+		    Position		    [205, 18, 270, 82]
+		    ZOrder		    26203
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[0,0,270.463,466.912,566.34,657.717,778.81,850.935]"
+		    InterpMethod	    "Nearest"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux"
+		    SID			    "2435"
+		    Ports		    [4, 1]
+		    Position		    [430, 3, 435, 352]
+		    ZOrder		    26212
+		    ShowName		    off
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Lookup_n-D
+		    Name		    "N Lookup"
+		    SID			    "2436"
+		    Ports		    [1, 1]
+		    Position		    [205, 273, 270, 337]
+		    ZOrder		    26206
+		    NumberOfTableDimensions "1"
+		    BreakpointsForDimension1 "[1,3,5,7,9,11,13,15]"
+		    Table		    "[100,100,25.407,3841.383,4641.225,5316.66,53.64,61.05]"
+		    InterpMethod	    "Nearest"
+		    InternalRulePriority    "Speed"
+		    RndMeth		    "Simplest"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "PIDN Gains"
+		    SID			    "2437"
+		    Position		    [510, 173, 540, 187]
+		    ZOrder		    26213
+		    BackgroundColor	    "cyan"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    1
+		    SrcBlock		    "Kd Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    3
+		    }
+		    Line {
+		    ZOrder		    2
+		    SrcBlock		    "Vhcl.v"
+		    SrcPort		    1
+		    Points		    [20, 0]
+		    Branch {
+		    ZOrder		    3
+		    Points		    [0, 40]
+		    Branch {
+		    ZOrder		    4
+		    Points		    [0, 85]
+		    DstBlock		    "N Lookup"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    5
+		    DstBlock		    "Kd Lookup"
+		    DstPort		    1
+		    }
+		    }
+		    Branch {
+		    ZOrder		    6
+		    Points		    [0, -45]
+		    Branch {
+		    ZOrder		    7
+		    Points		    [0, -85]
+		    DstBlock		    "Kp Lookup"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    8
+		    DstBlock		    "Ki Lookup"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Line {
+		    ZOrder		    9
+		    SrcBlock		    "Ki Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    10
+		    SrcBlock		    "Kp Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    11
+		    SrcBlock		    "N Lookup"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    4
+		    }
+		    Line {
+		    ZOrder		    12
+		    SrcBlock		    "Mux"
+		    SrcPort		    1
+		    DstBlock		    "PIDN Gains"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Block {
 		    BlockType		    Outport
 		    Name		    "PT.WRL.Trq_Drive"
 		    SID			    "2253"
-		    Position		    [-445, -87, -415, -73]
+		    Position		    [-360, -537, -330, -523]
 		    ZOrder		    -2
 		    BackgroundColor	    "cyan"
 		    IconDisplay		    "Port number"
@@ -15859,7 +17839,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "PT.WRR.Trq_Drive"
 		    SID			    "2254"
-		    Position		    [-445, -42, -415, -28]
+		    Position		    [-360, -482, -330, -468]
 		    ZOrder		    1
 		    BackgroundColor	    "cyan"
 		    Port		    "2"
@@ -15869,7 +17849,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "PT.WRL.Trq_Supp2WC"
 		    SID			    "2255"
-		    Position		    [-445, 3, -415, 17]
+		    Position		    [-360, -427, -330, -413]
 		    ZOrder		    3
 		    BackgroundColor	    "cyan"
 		    Port		    "3"
@@ -15879,7 +17859,7 @@ Model {
 		    BlockType		    Outport
 		    Name		    "PT.WRR.Trq_Supp2WC"
 		    SID			    "2256"
-		    Position		    [-445, 48, -415, 62]
+		    Position		    [-360, -372, -330, -358]
 		    ZOrder		    5
 		    BackgroundColor	    "cyan"
 		    Port		    "4"
@@ -15984,15 +17964,15 @@ Model {
 		    Points		    [40, 0]
 		    Branch {
 		    ZOrder		    263
-		    Points		    [75, 0]
+		    Points		    [134, 0]
 		    Branch {
-		    ZOrder		    246
-		    Points		    [0, -105]
-		    DstBlock		    "Gain Scheduler\n(PIDN Lookup)"
+		    ZOrder		    413
+		    Points		    [0, -80]
+		    DstBlock		    "ts_18 Gain Scheduler\nv5 30sept"
 		    DstPort		    1
 		    }
 		    Branch {
-		    ZOrder		    57
+		    ZOrder		    334
 		    DstBlock		    "Desired Yaw Rate Generator"
 		    DstPort		    1
 		    }
@@ -16009,34 +17989,26 @@ Model {
 		    ZOrder		    23
 		    SrcBlock		    "Vhcl.Steer.Ang"
 		    SrcPort		    1
+		    Points		    [94, 0]
+		    Branch {
+		    ZOrder		    304
+		    Points		    [0, -281; 877, 0; 0, 26]
+		    DstBlock		    "Torque Distribution"
+		    DstPort		    2
+		    }
+		    Branch {
+		    ZOrder		    303
 		    DstBlock		    "Desired Yaw Rate Generator"
 		    DstPort		    2
 		    }
-		    Line {
-		    ZOrder		    24
-		    SrcBlock		    "Subtract"
-		    SrcPort		    1
-		    DstBlock		    "PID Controller "
-		    DstPort		    1
 		    }
 		    Line {
-		    Name		    "Desired Yaw Rate"
 		    ZOrder		    25
-		    Labels		    [0, 0]
 		    SrcBlock		    "Desired Yaw Rate Generator"
 		    SrcPort		    1
-		    Points		    [42, 0]
-		    Branch {
-		    ZOrder		    214
-		    Points		    [0, -84; 183, 0; 0, -66]
+		    Points		    [14, 0; 0, -150]
 		    DstBlock		    "Reference Yaw Rate Limiter"
 		    DstPort		    2
-		    }
-		    Branch {
-		    ZOrder		    90
-		    DstBlock		    "Subtract"
-		    DstPort		    1
-		    }
 		    }
 		    Line {
 		    Name		    "Yaw Rate Feedback"
@@ -16054,7 +18026,7 @@ Model {
 		    Labels		    [1, 1]
 		    SrcBlock		    "   "
 		    SrcPort		    1
-		    Points		    [227, 0; 0, 245]
+		    Points		    [160, 0; 0, 210]
 		    DstBlock		    "Torque Distribution"
 		    DstPort		    1
 		    }
@@ -16063,7 +18035,7 @@ Model {
 		    SrcBlock		    "TV Enable"
 		    SrcPort		    1
 		    DstBlock		    "Torque Distribution"
-		    DstPort		    2
+		    DstPort		    3
 		    }
 		    Line {
 		    Name		    "Delta Torque command"
@@ -16071,7 +18043,7 @@ Model {
 		    Labels		    [0, 0]
 		    SrcBlock		    "PID Controller "
 		    SrcPort		    1
-		    Points		    [87, 0; 0, -195]
+		    Points		    [162, 0; 0, -200]
 		    DstBlock		    "Torque Distribution"
 		    DstPort		    4
 		    }
@@ -16104,21 +18076,23 @@ Model {
 		    DstPort		    1
 		    }
 		    Line {
+		    Name		    "Reference Yaw Rate"
 		    ZOrder		    215
+		    Labels		    [2, 1]
 		    SrcBlock		    "Reference Yaw Rate Limiter"
 		    SrcPort		    1
-		    DstBlock		    "Torque Distribution"
-		    DstPort		    3
-		    }
-		    Line {
-		    Name		    "PID Gains + Filter Coeff N"
-		    ZOrder		    257
-		    Labels		    [1, 1]
-		    SrcBlock		    "Gain Scheduler\n(PIDN Lookup)"
-		    SrcPort		    1
-		    Points		    [211, 0; 0, 210]
-		    DstBlock		    "Demux"
+		    Points		    [40, 0; 0, 70]
+		    Branch {
+		    ZOrder		    299
+		    DstBlock		    "Write CM Dict"
 		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    297
+		    Points		    [0, 74; -179, 0; 0, 26]
+		    DstBlock		    "Subtract"
+		    DstPort		    1
+		    }
 		    }
 		    Line {
 		    ZOrder		    258
@@ -16148,6 +18122,43 @@ Model {
 		    DstBlock		    "PID Controller "
 		    DstPort		    5
 		    }
+		    Line {
+		    Name		    "Yaw Rate Error"
+		    ZOrder		    289
+		    Labels		    [1, 1]
+		    SrcBlock		    "Subtract"
+		    SrcPort		    1
+		    Points		    [80, 0]
+		    Branch {
+		    ZOrder		    441
+		    Points		    [0, -55]
+		    DstBlock		    "Write CM Dict1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    440
+		    DstBlock		    "PID Controller "
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    Name		    "PID+N Gains"
+		    ZOrder		    414
+		    Labels		    [0, 0]
+		    SrcBlock		    "ts_18 Gain Scheduler\nv5 30sept"
+		    SrcPort		    1
+		    Points		    [109, 0; 0, 146; 146, 0]
+		    DstBlock		    "Demux"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "PID Gains + Filter Coeff N"
+		    ZOrder		    410
+		    Labels		    [0, 0]
+		    SrcBlock		    "'base' Gain Scheduler (v2)"
+		    SrcPort		    1
+		    Points		    [48, 0]
+		    }
 		    Annotation {
 		    SID			    "2357"
 		    Name		    "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<"
@@ -16156,15 +18167,16 @@ Model {
 		    "p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent"
 		    ":0px;\"><span style=\" font-size:16px; font-weight:600; text-decoration: underline;\">Propulsion Torque Generati"
 		    "on</span></p></body></html>"
-		    Position		    [-1824, -504, -1593, -484]
+		    Position		    [-1739, -919, -1508, -899]
 		    InternalMargins	    [0, 0, 0, 0]
 		    HorizontalAlignment	    "left"
 		    VerticalAlignment	    "top"
 		    Interpreter		    "rich"
+		    ZOrder		    -1
 		    }
 		    Annotation {
 		    SID			    "2356"
-		    Position		    [-1833, -69, -837, 361]
+		    Position		    [-1748, -484, -752, -54]
 		    InternalMargins	    [0, 0, 0, 0]
 		    FixedHeight		    on
 		    FixedWidth		    on
@@ -16174,12 +18186,12 @@ Model {
 		    BackgroundColor	    "[0.956863, 0.980392, 0.921569]"
 		    DropShadow		    on
 		    AnnotationType	    "area_annotation"
-		    ZOrder		    29
+		    ZOrder		    155
 		    FontSize		    12
 		    }
 		    Annotation {
 		    SID			    "2355"
-		    Position		    [-1834, -476, -836, -141]
+		    Position		    [-1749, -891, -751, -556]
 		    InternalMargins	    [0, 0, 0, 0]
 		    FixedHeight		    on
 		    FixedWidth		    on
@@ -16188,7 +18200,7 @@ Model {
 		    ForegroundColor	    "[0.992157, 0.937255, 0.913725]"
 		    BackgroundColor	    "[0.992157, 0.937255, 0.913725]"
 		    AnnotationType	    "area_annotation"
-		    ZOrder		    28
+		    ZOrder		    154
 		    FontSize		    12
 		    }
 		    Annotation {
@@ -16199,13 +18211,14 @@ Model {
 		    "p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent"
 		    ":0px;\"><span style=\" font-size:14px;\">****Need to know torque output limit of the motors for controller outpu"
 		    "t saturation &amp; clamping</span></p></body></html>"
-		    Position		    [-1197, 418, -883, 449]
+		    Position		    [-3210, -276, -2896, -245]
 		    InternalMargins	    [0, 0, 0, 0]
 		    FixedHeight		    on
 		    FixedWidth		    on
 		    HorizontalAlignment	    "left"
 		    VerticalAlignment	    "top"
 		    Interpreter		    "rich"
+		    ZOrder		    -4
 		    }
 		    Annotation {
 		    SID			    "2313"
@@ -16213,7 +18226,7 @@ Model {
 		    "controller (will this be a fixed limit, or change depending on the amount of grip the car has? If not a fixed li"
 		    "mit, have to build a PID from scratch out of discrete blocks (shouldn't be too hard, see 'Model to Raceing in 5m"
 		    "in' mathworks video"
-		    Position		    [-591, 325, -335, 404]
+		    Position		    [-3181, -408, -2925, -329]
 		    InternalMargins	    [0, 0, 0, 0]
 		    FixedHeight		    on
 		    FixedWidth		    on
@@ -16232,7 +18245,7 @@ Model {
 		    ":0; text-indent:0px;\"><span style=\" font-size:14px;\"><br />Negative = Right Turn</span></p>\n<p style=\" marg"
 		    "in-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span s"
 		    "tyle=\" font-size:14px;\">Positive = Left Turn</span></p></body></html>"
-		    Position		    [-2182, 48, -1914, 118]
+		    Position		    [-3154, -515, -2886, -445]
 		    InternalMargins	    [0, 0, 0, 0]
 		    FixedHeight		    on
 		    FixedWidth		    on
@@ -16244,7 +18257,7 @@ Model {
 		    Annotation {
 		    SID			    "2259"
 		    Name		    "rotv"
-		    Position		    [-1510, -357, -1492, -343]
+		    Position		    [-1425, -772, -1407, -758]
 		    InternalMargins	    [0, 0, 0, 0]
 		    HorizontalAlignment	    "left"
 		    VerticalAlignment	    "top"
@@ -16253,7 +18266,7 @@ Model {
 		    Annotation {
 		    SID			    "2258"
 		    Name		    "Trq"
-		    Position		    [-1152, -316, -1136, -302]
+		    Position		    [-1067, -731, -1051, -717]
 		    InternalMargins	    [0, 0, 0, 0]
 		    HorizontalAlignment	    "left"
 		    VerticalAlignment	    "top"
@@ -16261,9 +18274,9 @@ Model {
 		    }
 		    Annotation {
 		    SID			    "2257"
-		    Name		    "PowerTrain.Motor.Mot.TrqMap\n    \n    RPM |  Nm	\n----------------------------	\n    0         300.0"
-		    "\n    700     300.0\n    1400   150.0\n    2100   100.0\n    3000    75.0\n    8000    20.0"
-		    Position		    [-1529, -331, -1390, -189]
+		    Name		    "PowerTrain.Motor.Mot.TrqMap\n    \n    RPM |  Nm	\n----------------------------	\n    0         240.0"
+		    "\n    700     240.0\n    1400   240.0\n    2100   240.0\n    3000   235.0\n    8000   216.0"
+		    Position		    [-1444, -746, -1305, -604]
 		    InternalMargins	    [0, 0, 0, 0]
 		    FixedHeight		    on
 		    FixedWidth		    on
@@ -16278,7 +18291,7 @@ Model {
 		    "p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent"
 		    ":0px;\"><span style=\" font-size:16px; font-weight:600; text-decoration: underline;\">Yaw Rate Controller</span>"
 		    "</p></body></html>"
-		    Position		    [-1833, -99, -1679, -79]
+		    Position		    [-1748, -514, -1594, -494]
 		    InternalMargins	    [0, 0, 0, 0]
 		    HorizontalAlignment	    "left"
 		    VerticalAlignment	    "top"
@@ -16288,165 +18301,27 @@ Model {
 		  }
 		}
 		Block {
-		  BlockType		  S-Function
-		  Name			  "PowerTrain"
-		  SID			  "2187"
-		  Ports			  [3, 2]
-		  Position		  [205, 27, 280, 343]
-		  ZOrder		  -6
-		  BackgroundColor	  "green"
-		  FunctionName		  "CM_Sfun"
-		  Parameters		  "'PowerTrain'"
-		  SFunctionDeploymentMode off
-		  EnableBusSupport	  off
-		  SFcnIsStateOwnerBlock	  off
-		  Port {
-		    PortNumber		    1
-		    Name		    "Sync"
-		  }
+		  BlockType		  Terminator
+		  Name			  "Terminator"
+		  SID			  "2446"
+		  Position		  [165, 490, 185, 510]
+		  ZOrder		  266
+		  ShowName		  off
 		}
 		Block {
-		  BlockType		  S-Function
-		  Name			  "PowerTrainUpd"
-		  SID			  "2188"
-		  Ports			  [2, 1]
-		  Position		  [645, 26, 725, 344]
-		  ZOrder		  -7
-		  BackgroundColor	  "green"
-		  FunctionName		  "CM_Sfun"
-		  Parameters		  "'PowerTrainUpd'"
-		  SFunctionDeploymentMode off
-		  EnableBusSupport	  off
-		  SFcnIsStateOwnerBlock	  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Read CM Dict"
-		  SID			  "2260"
-		  Ports			  [0, 1]
-		  Position		  [185, 610, 255, 630]
-		  ZOrder		  31
-		  BackgroundColor	  "orange"
-		  LibraryVersion	  "1.493"
-		  SourceBlock		  "CarMaker4SL/Read CM Dict"
-		  SourceType		  "Read CarMaker Dictionary Variable(s)"
-		  SourceProductName	  "CarMaker4SL"
-		  MultiThreadCoSim	  "auto"
-		  xname			  "PT.WRL.rotv"
-		  xsync			  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Read CM Dict1"
-		  SID			  "2261"
-		  Ports			  [0, 1]
-		  Position		  [185, 640, 255, 660]
-		  ZOrder		  32
-		  BackgroundColor	  "orange"
-		  LibraryVersion	  "1.493"
-		  SourceBlock		  "CarMaker4SL/Read CM Dict"
-		  SourceType		  "Read CarMaker Dictionary Variable(s)"
-		  SourceProductName	  "CarMaker4SL"
-		  MultiThreadCoSim	  "auto"
-		  xname			  "PT.WRR.rotv"
-		  xsync			  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Read CM Dict2"
-		  SID			  "2262"
-		  Ports			  [0, 1]
-		  Position		  [185, 670, 255, 690]
-		  ZOrder		  33
-		  BackgroundColor	  "orange"
-		  LibraryVersion	  "1.493"
-		  SourceBlock		  "CarMaker4SL/Read CM Dict"
-		  SourceType		  "Read CarMaker Dictionary Variable(s)"
-		  SourceProductName	  "CarMaker4SL"
-		  MultiThreadCoSim	  "auto"
-		  xname			  "VC.Gas"
-		  xsync			  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Read CM Dict3"
-		  SID			  "2272"
-		  Ports			  [0, 1]
-		  Position		  [175, 732, 260, 748]
-		  ZOrder		  39
-		  BackgroundColor	  "orange"
-		  LibraryVersion	  "1.493"
-		  SourceBlock		  "CarMaker4SL/Read CM Dict"
-		  SourceType		  "Read CarMaker Dictionary Variable(s)"
-		  SourceProductName	  "CarMaker4SL"
-		  MultiThreadCoSim	  "auto"
-		  xname			  "Vhcl.v"
-		  xsync			  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Read CM Dict4"
-		  SID			  "2273"
-		  Ports			  [0, 1]
-		  Position		  [175, 762, 260, 778]
-		  ZOrder		  40
-		  BackgroundColor	  "orange"
-		  LibraryVersion	  "1.493"
-		  SourceBlock		  "CarMaker4SL/Read CM Dict"
-		  SourceType		  "Read CarMaker Dictionary Variable(s)"
-		  SourceProductName	  "CarMaker4SL"
-		  MultiThreadCoSim	  "auto"
-		  xname			  "Vhcl.YawRate"
-		  xsync			  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Read CM Dict5"
-		  SID			  "2277"
-		  Ports			  [0, 1]
-		  Position		  [175, 792, 260, 808]
-		  ZOrder		  41
-		  BackgroundColor	  "orange"
-		  LibraryVersion	  "1.493"
-		  SourceBlock		  "CarMaker4SL/Read CM Dict"
-		  SourceType		  "Read CarMaker Dictionary Variable(s)"
-		  SourceProductName	  "CarMaker4SL"
-		  MultiThreadCoSim	  "auto"
-		  xname			  "Vhcl.Steer.Ang"
-		  xsync			  off
-		}
-		Block {
-		  BlockType		  Reference
-		  Name			  "Read CM Parameter"
-		  SID			  "2263"
-		  Ports			  [0, 1]
-		  Position		  [150, 695, 285, 725]
-		  ZOrder		  34
-		  BackgroundColor	  "orange"
-		  LibraryVersion	  "1.493"
-		  SourceBlock		  "CarMaker4SL/Read CM Parameter"
-		  SourceType		  "Read CarMaker Infofile Parameter"
-		  SourceProductName	  "CarMaker4SL"
-		  MultiThreadCoSim	  "auto"
-		  xfile			  "Vehicle"
-		  xkey			  "PowerTrain.DL.iDiff_mean"
-		  xnout			  "1"
-		  xdefaults		  "0"
-		  xmuxed		  on
-		}
-		Block {
-		  BlockType		  Constant
-		  Name			  "TV Enable"
-		  SID			  "2280"
-		  Position		  [200, 815, 230, 845]
-		  ZOrder		  262
+		  BlockType		  Terminator
+		  Name			  "Terminator1"
+		  SID			  "2448"
+		  Position		  [165, 540, 185, 560]
+		  ZOrder		  268
+		  ShowName		  off
 		}
 		Block {
 		  BlockType		  Reference
 		  Name			  "Write CM Dict"
 		  SID			  "2264"
 		  Ports			  [1]
-		  Position		  [575, 635, 680, 655]
+		  Position		  [855, 550, 960, 570]
 		  ZOrder		  26
 		  BackgroundColor	  "orange"
 		  LibraryVersion	  "1.493"
@@ -16462,7 +18337,7 @@ Model {
 		  Name			  "Write CM Dict1"
 		  SID			  "2265"
 		  Ports			  [1]
-		  Position		  [575, 690, 680, 710]
+		  Position		  [855, 605, 960, 625]
 		  ZOrder		  27
 		  BackgroundColor	  "orange"
 		  LibraryVersion	  "1.493"
@@ -16478,7 +18353,7 @@ Model {
 		  Name			  "Write CM Dict2"
 		  SID			  "2266"
 		  Ports			  [1]
-		  Position		  [570, 745, 690, 765]
+		  Position		  [850, 660, 970, 680]
 		  ZOrder		  28
 		  BackgroundColor	  "orange"
 		  LibraryVersion	  "1.493"
@@ -16494,7 +18369,7 @@ Model {
 		  Name			  "Write CM Dict3"
 		  SID			  "2267"
 		  Ports			  [1]
-		  Position		  [570, 800, 690, 820]
+		  Position		  [850, 715, 970, 735]
 		  ZOrder		  29
 		  BackgroundColor	  "orange"
 		  LibraryVersion	  "1.493"
@@ -16509,7 +18384,7 @@ Model {
 		  BlockType		  Outport
 		  Name			  "Sync_Out"
 		  SID			  "2189"
-		  Position		  [775, 178, 805, 192]
+		  Position		  [1055, 93, 1085, 107]
 		  ZOrder		  -8
 		  IconDisplay		  "Port number"
 		}
@@ -16948,98 +18823,225 @@ Model {
 		  ZOrder		  50
 		  SrcBlock		  "Read CM Parameter"
 		  SrcPort		  1
-		  DstBlock		  "MyPowerTrainXWD"
+		  DstBlock		  "TV_System"
 		  DstPort		  4
 		}
 		Line {
 		  ZOrder		  52
 		  SrcBlock		  "Read CM Dict1"
 		  SrcPort		  1
-		  DstBlock		  "MyPowerTrainXWD"
+		  DstBlock		  "TV_System"
 		  DstPort		  2
 		}
 		Line {
 		  ZOrder		  53
 		  SrcBlock		  "Read CM Dict2"
 		  SrcPort		  1
-		  DstBlock		  "MyPowerTrainXWD"
+		  DstBlock		  "TV_System"
 		  DstPort		  3
-		}
-		Line {
-		  ZOrder		  54
-		  SrcBlock		  "MyPowerTrainXWD"
-		  SrcPort		  3
-		  DstBlock		  "Write CM Dict2"
-		  DstPort		  1
 		}
 		Line {
 		  ZOrder		  56
 		  SrcBlock		  "Read CM Dict"
 		  SrcPort		  1
-		  DstBlock		  "MyPowerTrainXWD"
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  57
-		  SrcBlock		  "MyPowerTrainXWD"
-		  SrcPort		  4
-		  DstBlock		  "Write CM Dict3"
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  82
-		  SrcBlock		  "MyPowerTrainXWD"
-		  SrcPort		  2
-		  DstBlock		  "Write CM Dict1"
-		  DstPort		  1
-		}
-		Line {
-		  ZOrder		  83
-		  SrcBlock		  "MyPowerTrainXWD"
-		  SrcPort		  1
-		  DstBlock		  "Write CM Dict"
+		  DstBlock		  "TV_System"
 		  DstPort		  1
 		}
 		Line {
 		  ZOrder		  74
 		  SrcBlock		  "Read CM Dict4"
 		  SrcPort		  1
-		  DstBlock		  "MyPowerTrainXWD"
+		  DstBlock		  "TV_System"
 		  DstPort		  6
 		}
 		Line {
 		  ZOrder		  75
 		  SrcBlock		  "Read CM Dict3"
 		  SrcPort		  1
-		  DstBlock		  "MyPowerTrainXWD"
+		  DstBlock		  "TV_System"
 		  DstPort		  5
 		}
 		Line {
 		  ZOrder		  76
 		  SrcBlock		  "Read CM Dict5"
 		  SrcPort		  1
-		  DstBlock		  "MyPowerTrainXWD"
+		  DstBlock		  "TV_System"
 		  DstPort		  7
 		}
 		Line {
 		  ZOrder		  81
 		  SrcBlock		  "TV Enable"
 		  SrcPort		  1
-		  DstBlock		  "MyPowerTrainXWD"
+		  DstBlock		  "TV_System"
 		  DstPort		  8
+		}
+		Line {
+		  ZOrder		  88
+		  SrcBlock		  "TV_System"
+		  SrcPort		  1
+		  DstBlock		  "Write CM Dict"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  89
+		  SrcBlock		  "TV_System"
+		  SrcPort		  2
+		  DstBlock		  "Write CM Dict1"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  92
+		  SrcBlock		  "TV_System"
+		  SrcPort		  3
+		  DstBlock		  "Write CM Dict2"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  93
+		  SrcBlock		  "TV_System"
+		  SrcPort		  4
+		  DstBlock		  "Write CM Dict3"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "xPos"
+		  ZOrder		  94
+		  Labels		  [1, 1]
+		  SrcBlock		  "Read CM Dict6"
+		  SrcPort		  1
+		  DstBlock		  "Terminator"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "yPos"
+		  ZOrder		  95
+		  Labels		  [1, 1]
+		  SrcBlock		  "Read CM Dict7"
+		  SrcPort		  1
+		  DstBlock		  "Terminator1"
+		  DstPort		  1
+		}
+		Annotation {
+		  SID			  "2440"
+		  Name			  "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<htm"
+		  "l><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</st"
+		  "yle></head><body style=\" font-family:'Helvetica'; font-size:10px; font-weight:400; font-style:normal;\">\n<p styl"
+		  "e=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
+		  "<span style=\" font-size:10px; text-decoration: underline;\">17oct</span></p>\n<p style=\" margin-top:0px; margin-"
+		  "bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10p"
+		  "x;\">w/ racing driver (corner cutting 0.8, learning rate 0):</span></p>\n<p style=\"-qt-paragraph-type:empty; marg"
+		  "in-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p"
+		  ">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-inde"
+		  "nt:0px;\"><span style=\" font-size:10px;\">0(adapted for 0) = 31.08</span></p>\n<p style=\" margin-top:0px; margin"
+		  "-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10"
+		  "px;\">1(adapted for 0) = 30.38 (-0.7)</span></p>\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bott"
+		  "om:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"
+		  Position		  [-378, 640, -150, 714]
+		  InternalMargins	  [0, 0, 0, 0]
+		  HorizontalAlignment	  "left"
+		  VerticalAlignment	  "top"
+		  Interpreter		  "rich"
+		  ZOrder		  -1
+		}
+		Annotation {
+		  SID			  "2439"
+		  Name			  "3oct:\n\nmountain road w/ user driver\n(agressive preset, 100kph cruising,\ncorner cutting = 0.8)\n\nTV "
+		  "Off = 168.34\nTV On = 168.32\n\n(agressive preset, 200kph cruising,\ncorner cutting = 1)\n\nTV Off = 166.8\nTV On "
+		  "= 166.74\n\n(agressive preset, 250kph cruising,\ncorner cutting = 0)\n\nTV Off = 169.04\nTV On = 169.16\n\n(agress"
+		  "ive preset, 250kph cruising,\ncorner cutting = 1)\n\nTV Off = 166.8\nTV On = 166.74\n"
+		  Position		  [-324, 268, -100, 607]
+		  InternalMargins	  [0, 0, 0, 0]
+		  FixedHeight		  on
+		  FixedWidth		  on
+		  HorizontalAlignment	  "left"
+		  VerticalAlignment	  "top"
+		  ZOrder		  -1
+		}
+		Annotation {
+		  SID			  "2438"
+		  Name			  "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<htm"
+		  "l><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</st"
+		  "yle></head><body style=\" font-family:'Helvetica'; font-size:10px; font-weight:400; font-style:normal;\">\n<p styl"
+		  "e=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">"
+		  "<span style=\" font-size:10px; text-decoration: underline;\">30sept: ts_18backup car</span></p>\n<p style=\" margi"
+		  "n-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span styl"
+		  "e=\" font-size:10px;\">w/ user param driver (corner cutting coeff = 0, cruising speed = 50km/h) on standard size s"
+		  "kidpad:</span></p>\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margi"
+		  "n-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n<p style=\" margin-top:0px; margin-bottom:0px; mar"
+		  "gin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10px;\">TV off = 4"
+		  "1.84</span></p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-inden"
+		  "t:0; text-indent:0px;\"><span style=\" font-size:10px;\">TV on = 41.72</span></p>\n<p style=\"-qt-paragraph-type:e"
+		  "mpty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\""
+		  "><br /></p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0;"
+		  " text-indent:0px;\"><span style=\" font-size:10px;\">0.12s improvement</span></p>\n<p style=\"-qt-paragraph-type:e"
+		  "mpty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\""
+		  "><br /></p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0;"
+		  " text-indent:0px;\"><span style=\" font-size:10px;\">w/ racing driver (corner cutting 0.25, learning rate 0.75):</"
+		  "span></p>\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0"
+		  "px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:"
+		  "0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10px;\">0(adapted for 0) = "
+		  "31.46</span></p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-inde"
+		  "nt:0; text-indent:0px;\"><span style=\" font-size:10px;\">1(adapted for 0) = 31.23 (-0.23)</span></p>\n<p style=\""
+		  " margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><spa"
+		  "n style=\" font-size:10px;\">0(adapted for 1) = (doesn't work)</span></p>\n<p style=\" margin-top:0px; margin-bott"
+		  "om:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10px;\""
+		  ">1(adapted for 1) =  (doesn't work)</span></p>\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom"
+		  ":0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n<p style=\" margin-top"
+		  ":0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" "
+		  "font-size:10px;\">file &gt;&gt; open &gt;&gt; skiddypad_ts18_TVoff</span></p>\n<p style=\"-qt-paragraph-type:empty"
+		  "; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br"
+		  " /></p></body></html>"
+		  Position		  [-313, 25, -43, 238]
+		  InternalMargins	  [0, 0, 0, 0]
+		  FixedHeight		  on
+		  FixedWidth		  on
+		  HorizontalAlignment	  "left"
+		  VerticalAlignment	  "top"
+		  Interpreter		  "rich"
+		  ZOrder		  -1
+		}
+		Annotation {
+		  SID			  "2396"
+		  Name			  "base:\n0(adapted for 0) = 45.58\n1(adapted for 0) = 45.56\n0(adapted for 1) = 45.31\n1(adapted for 1) = "
+		  " 45.30"
+		  Position		  [-272, 724, -150, 791]
+		  InternalMargins	  [0, 0, 0, 0]
+		  FixedHeight		  on
+		  FixedWidth		  on
+		  HorizontalAlignment	  "left"
+		  VerticalAlignment	  "top"
+		  ZOrder		  -1
+		}
+		Annotation {
+		  SID			  "2394"
+		  Name			  "w/ adapted racing driver on 'base' car:\nTV off - 27.54\nTV on - 27.47\n\n0.07s improvement\n\n(13 Sept)"
+		  Position		  [-287, -110, -118, -24]
+		  InternalMargins	  [0, 0, 0, 0]
+		  HorizontalAlignment	  "left"
+		  VerticalAlignment	  "top"
+		  ZOrder		  -1
+		}
+		Annotation {
+		  SID			  "2369"
+		  Name			  "1 - 40.83\n0 - 40.86"
+		  Position		  [13, 351, 54, 377]
+		  InternalMargins	  [0, 0, 0, 0]
+		  HorizontalAlignment	  "left"
+		  VerticalAlignment	  "top"
+		  ZOrder		  -1
 		}
 		Annotation {
 		  SID			  "2191"
 		  Name			  "When replacing the entire powertrain,\nbe sure to add '-disablepowertrain' to the command line arguments"
 		  "\nin the CarMaker Model Configuration block."
-		  Position		  [23, 424, 319, 462]
+		  Position		  [18, -86, 314, -48]
 		  InternalMargins	  [0, 0, 0, 0]
 		  ZOrder		  -1
 		}
 		Annotation {
 		  SID			  "2190"
 		  Name			  "<Your model here>"
-		  Position		  [533, 182, 619, 196]
+		  Position		  [813, 97, 899, 111]
 		  InternalMargins	  [0, 0, 0, 0]
 		  ZOrder		  -2
 		}
@@ -18916,7 +20918,7 @@ Model {
       Name		      "Edit Model\nConfiguration"
       SID		      "1727"
       Ports		      []
-      Position		      [40, 130, 103, 193]
+      Position		      [-330, -90, -267, -27]
       ZOrder		      -2
       BackgroundColor	      "lightBlue"
       LibraryVersion	      "1.493"
@@ -18931,7 +20933,7 @@ Model {
       Name		      "Open CarMaker GUI"
       SID		      "1728"
       Ports		      []
-      Position		      [275, 130, 339, 194]
+      Position		      [-95, -90, -31, -26]
       ZOrder		      -3
       BackgroundColor	      "lightBlue"
       LoadFcn		      "if ~length(which('cmself')), cmenv; end"
@@ -18939,7 +20941,7 @@ Model {
       RequestExecContextInheritance off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		27
+	$ObjectID		28
 	$ClassName		"Simulink.Mask"
 	Display			"image(imread('CarMakerGUI.png'));"
       }
@@ -18978,7 +20980,7 @@ Model {
     Annotation {
       SID		      "704"
       Name		      "Generic Car Model"
-      Position		      [109, 34, 262, 57]
+      Position		      [-261, -186, -108, -163]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -1
       FontSize		      18
@@ -18988,7 +20990,7 @@ Model {
     Annotation {
       SID		      "705"
       Name		      "You may use this model as a starting point."
-      Position		      [92, 65, 283, 79]
+      Position		      [-278, -155, -87, -141]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -2
     }
@@ -18996,14 +20998,14 @@ Model {
       SID		      "706"
       Name		      "It already contains everything to run a simple CarMaker simulation.\nBuild your Simulink model arou"
       "nd it."
-      Position		      [39, 79, 336, 105]
+      Position		      [-331, -141, -34, -115]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -3
     }
     Annotation {
       SID		      "707"
       Name		      "CarMaker 7.0.3"
-      Position		      [150, 9, 220, 23]
+      Position		      [-220, -211, -150, -197]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -4
     }
@@ -19021,18 +21023,18 @@ Stateflow {
     created		    "05-Sep-2019 16:09:59"
     isLibrary		    0
     sfVersion		    80000014
-    firstTarget		    30
+    firstTarget		    19
   }
   chart {
     id			    2
     machine		    1
-    name		    "CarMaker/IPG Vehicle/PowerTrain/MyPowerTrainXWD/Torque Distribution/Delta Torque Splitter"
+    name		    "CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Delta Torque Splitter"
     windowPosition	    [422 539.941 189 413]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 3 0 0]
     viewObj		    2
-    ssIdHighWaterMark	    7
+    ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
     chartFileNumber	    1
@@ -19058,19 +21060,24 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function [Trq_RL,Trq_RR] = split_delta_Trq(moment_direction,half_delta_Trq)\nif moment_direction "
-      "== 1\n%if desired yaw rate = positive (aka a left turn)\n%then need to add half delta torque to Rear Left, subtr"
-      "act from Rear Right\n    Trq_RL = half_delta_Trq;\n    Trq_RR = -half_delta_Trq;\nelseif moment_direction == -1\n"
-      "%if desired yaw rate = negative (aka a right turn)\n%then need to add half delta torque to Rear Right, subtract "
-      "from Rear Left\n    Trq_RL = -half_delta_Trq;\n    Trq_RR = half_delta_Trq;\nelse\n%safety condition, add positv"
-      "e to both wheels\n    Trq_RL = half_delta_Trq;\n    Trq_RR = half_delta_Trq;\nend"
+      script		      "function [Trq_RL,Trq_RR] = split_delta_Trq(steer_ang, half_delta_Trq)\n\n%added steering deadzone"
+      " where small steer angles don't activate TV\nif abs(steer_ang) > 0.15   \n    %FOR LEFT TURN:\n    %delta torque"
+      " command = positive\n    %therefore, add half_delta to RR, sub half_delta from RL\n    %FOR RIGHT TURN:\n    %de"
+      "lta torque command = negative\n    %therefore again, add half_delta to RR, sub half_delta from RL\n    %HENCE: s"
+      "ame torque assignment (signs) for each case\n    %       (add to RR, sub from RL)\n    \n    Trq_RR = half_delta"
+      "_Trq;\n    Trq_RL = -half_delta_Trq;\n    \n%     if ref_yaw_rate > 0\n%     %if reference yaw rate = positive ("
+      "aka a left turn)\n%     %then need to subtract half delta torque to Rear Left, add to Rear Right\n%         Trq_"
+      "RL = -half_delta_Trq;\n%         Trq_RR = half_delta_Trq;\n%     elseif ref_yaw_rate < 0\n%     %if reference ya"
+      "w rate = negative (aka a right turn)\n%     %then need to add half delta torque to Rear Left, subtract from Rear"
+      " Right\n%         Trq_RL = half_delta_Trq;\n%         Trq_RR = -half_delta_Trq;\n%     else\n%     %safety condi"
+      "tion\n%         Trq_RL = 0;\n%         Trq_RR = 0;\n%     end\nelse\n   Trq_RL = 0;\n   Trq_RR = 0; \nend"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
   data {
     id			    4
-    ssIdNumber		    4
-    name		    "moment_direction"
+    ssIdNumber		    8
+    name		    "steer_ang"
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -19080,8 +21087,11 @@ Stateflow {
       type {
 	method			SF_INHERITED_TYPE
 	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
       }
       complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
       unit {
 	name			"inherit"
       }
@@ -19198,32 +21208,29 @@ Stateflow {
   instance {
     id			    10
     machine		    1
-    name		    "CarMaker/IPG Vehicle/PowerTrain/MyPowerTrainXWD/Torque Distribution/Delta Torque Splitter"
+    name		    "CarMaker/IPG Vehicle/PowerTrain/TV_System/Torque Distribution/Delta Torque Splitter"
     chart		    2
   }
   chart {
     id			    11
     machine		    1
-    name		    "CarMaker/IPG Vehicle/PowerTrain/MyPowerTrainXWD/Desired Yaw Rate Generator/MATLAB Function"
+    name		    "CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/MATLAB Function"
     windowPosition	    [422 539.941 189 413]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 12 0 0]
     viewObj		    11
-    visible		    1
-    subviewS {
-    }
-    ssIdHighWaterMark	    10
+    ssIdHighWaterMark	    7
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
-    chartFileNumber	    2
+    chartFileNumber	    3
     disableImplicitCasting  1
     eml {
-      name		      "desiredYaw"
+      name		      "fcn"
     }
     firstData		    13
-    firstTransition	    20
-    firstJunction	    19
+    firstTransition	    17
+    firstJunction	    16
   }
   state {
     id			    12
@@ -19239,15 +21246,16 @@ Stateflow {
     decomposition	    CLUSTER_STATE
     eml {
       isEML		      1
-      script		      "function desired_yaw = desiredYaw(Vcg , steering_angle, understeer_coeff, Lf, Lr)\ndesired_yaw = "
-      "Vcg*steering_angle/((Lf*Lr) + understeer_coeff*Vcg^2);\n"
+      script		      "function ref_yaw = fcn(max_yaw, des_yaw)\n    if abs(des_yaw) > max_yaw\n        if des_yaw >= 0\n"
+      "            ref_yaw = max_yaw;\n        else\n            ref_yaw = -max_yaw;\n        end      \n    else \n   "
+      "     ref_yaw = des_yaw;\n    end\n"
       editorLayout	      "100 M4x1[10 5 700 500]"
     }
   }
   data {
     id			    13
     ssIdNumber		    4
-    name		    "Vcg"
+    name		    "max_yaw"
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -19269,7 +21277,7 @@ Stateflow {
   data {
     id			    14
     ssIdNumber		    5
-    name		    "desired_yaw"
+    name		    "ref_yaw"
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -19291,234 +21299,6 @@ Stateflow {
   }
   data {
     id			    15
-    ssIdNumber		    7
-    name		    "steering_angle"
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
-    }
-    dataType		    "Inherit: Same as Simulink"
-    linkNode		    [11 14 16]
-  }
-  data {
-    id			    16
-    ssIdNumber		    8
-    name		    "understeer_coeff"
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
-    }
-    dataType		    "Inherit: Same as Simulink"
-    linkNode		    [11 15 17]
-  }
-  data {
-    id			    17
-    ssIdNumber		    9
-    name		    "Lf"
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
-    }
-    dataType		    "Inherit: Same as Simulink"
-    linkNode		    [11 16 18]
-  }
-  data {
-    id			    18
-    ssIdNumber		    10
-    name		    "Lr"
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
-    }
-    dataType		    "Inherit: Same as Simulink"
-    linkNode		    [11 17 0]
-  }
-  junction {
-    id			    19
-    position		    [23.5747 49.5747 7]
-    chart		    11
-    subviewer		    11
-    ssIdNumber		    3
-    type		    CONNECTIVE_JUNCTION
-    linkNode		    [11 0 0]
-  }
-  transition {
-    id			    20
-    labelString		    "{eML_blk_kernel();}"
-    labelPosition	    [28.125 13.875 102.544 14.964]
-    fontSize		    12
-    src {
-      intersection	      [0 0 1 0 23.5747 14.625 0 0]
-    }
-    dst {
-      id		      19
-      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
-    }
-    midPoint		    [23.5747 24.9468]
-    chart		    11
-    dataLimits		    [21.175 25.975 14.625 42.575]
-    subviewer		    11
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    1
-    ssIdNumber		    2
-    linkNode		    [11 0 0]
-  }
-  instance {
-    id			    21
-    machine		    1
-    name		    "CarMaker/IPG Vehicle/PowerTrain/MyPowerTrainXWD/Desired Yaw Rate Generator/MATLAB Function"
-    chart		    11
-  }
-  chart {
-    id			    22
-    machine		    1
-    name		    "CarMaker/IPG Vehicle/PowerTrain/MyPowerTrainXWD/Reference Yaw Rate Limiter/MATLAB Function"
-    windowPosition	    [422 539.941 189 413]
-    viewLimits		    [0 156.75 0 153.75]
-    screen		    [1 1 3600 1200 1.180555555555556]
-    treeNode		    [0 23 0 0]
-    viewObj		    22
-    visible		    1
-    subviewS {
-    }
-    ssIdHighWaterMark	    7
-    decomposition	    CLUSTER_CHART
-    type		    EML_CHART
-    chartFileNumber	    3
-    disableImplicitCasting  1
-    eml {
-      name		      "fcn"
-    }
-    firstData		    24
-    firstTransition	    28
-    firstJunction	    27
-  }
-  state {
-    id			    23
-    labelString		    "eML_blk_kernel()"
-    position		    [18 64.5 118 66]
-    fontSize		    12
-    chart		    22
-    treeNode		    [22 0 0 0]
-    superState		    SUBCHART
-    subviewer		    22
-    ssIdNumber		    1
-    type		    FUNC_STATE
-    decomposition	    CLUSTER_STATE
-    eml {
-      isEML		      1
-      script		      "function ref_yaw = fcn(max_yaw, des_yaw)\n    if abs(des_yaw) > max_yaw\n        if des_yaw >= 0\n"
-      "            ref_yaw = max_yaw;\n        else\n            ref_yaw = -max_yaw;\n        end      \n    else \n   "
-      "     ref_yaw = des_yaw;\n    end\n"
-      editorLayout	      "100 M4x1[10 5 700 500]"
-    }
-  }
-  data {
-    id			    24
-    ssIdNumber		    4
-    name		    "max_yaw"
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      unit {
-	name			"inherit"
-      }
-    }
-    dataType		    "Inherit: Same as Simulink"
-    linkNode		    [22 0 25]
-  }
-  data {
-    id			    25
-    ssIdNumber		    5
-    name		    "ref_yaw"
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
-    }
-    dataType		    "Inherit: Same as Simulink"
-    linkNode		    [22 24 26]
-  }
-  data {
-    id			    26
     ssIdNumber		    6
     name		    "des_yaw"
     scope		    INPUT_DATA
@@ -19540,19 +21320,19 @@ Stateflow {
       }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [22 25 0]
+    linkNode		    [11 14 0]
   }
   junction {
-    id			    27
+    id			    16
     position		    [23.5747 49.5747 7]
-    chart		    22
-    subviewer		    22
+    chart		    11
+    subviewer		    11
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [22 0 0]
+    linkNode		    [11 0 0]
   }
   transition {
-    id			    28
+    id			    17
     labelString		    "{eML_blk_kernel();}"
     labelPosition	    [28.125 13.875 102.544 14.964]
     fontSize		    12
@@ -19560,29 +21340,29 @@ Stateflow {
       intersection	      [0 0 1 0 23.5747 14.625 0 0]
     }
     dst {
-      id		      27
+      id		      16
       intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
     }
     midPoint		    [23.5747 24.9468]
-    chart		    22
+    chart		    11
     dataLimits		    [21.175 25.975 14.625 42.575]
-    subviewer		    22
+    subviewer		    11
     drawStyle		    SMART
     slide {
       sticky		      BOTH_STICK
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [22 0 0]
+    linkNode		    [11 0 0]
   }
   instance {
-    id			    29
+    id			    18
     machine		    1
-    name		    "CarMaker/IPG Vehicle/PowerTrain/MyPowerTrainXWD/Reference Yaw Rate Limiter/MATLAB Function"
-    chart		    22
+    name		    "CarMaker/IPG Vehicle/PowerTrain/TV_System/Reference Yaw Rate Limiter/MATLAB Function"
+    chart		    11
   }
   target {
-    id			    30
+    id			    19
     machine		    1
     name		    "sfun"
     description		    "Default Simulink S-Function Target."

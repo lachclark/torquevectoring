@@ -66,46 +66,49 @@ function [theModel] = makeBikeModel(Vxo)
 
 
 
-%   acquired values from ts_18(?) CAD
-
+% %acquired values from ts_18(?) CAD
 % Cyr = 37987.102;
-% 
 % Cyf = 33632.623;
-% 
 % Izz = 110;
-% 
 % m = 340;
-% 
 % Lf = 0.55;
-% 
 % Lr = 0.525;
-% 
 % Gr = 2.2;
-% 
 % tr = 0.525;
-% 
 % Rw = 0.232;
 
-% approx parameters for example 'base' car
+% % approx parameters for example 'base' car
+% Cyr = 114107;
+% Cyf = 41165.4;
+% Izz = 600;
+% m = 600;
+% Lf = 2.56;
+% Lr = 1.02;
+% Gr = 1;
+% tr = 1.415;
+% Rw = 0.2;
 
-Cyr = 17000;
+% for ts_18 v2 (19sept)
+m = 336.83;
+Cyr = 18200;
+Cyf = 20000;
+Lf = 0.918;
+Lr = 0.612;
+Izz = 180;
+Rw = 0.232;
+Gr = 2.2;
+tr = 0.636;
 
-Cyf = 11500;
-
-Izz = 600;
-
-m = 600;
-
-Lf = 2.56;
-
-Lr = 1.02;
-
-Gr = 1;
-
-tr = 1.415;
-
-Rw = 0.2;
-
+% for thesis parameters 
+% m = 356;
+% Cyr = 21429;
+% Cyf = 15714;
+% Lf = 0.873;
+% Lr = 0.717;
+% Izz = 120;
+% Rw = 0.265;
+% Gr = 4.4;
+% tr = 0.65;
 
 
 % *for calculating ?T from Mz (assisting yaw moment)
@@ -138,42 +141,27 @@ B21 = 1/(k*Izz);
 
 B22 = (Lf*Cyf)/Izz;
 
-
-
 A = [A11 A12;
 
      A21 A22];
 
-
-
+ 
 B = [B11 B12;
 
      B21 B22];
 
-
-
+ 
 % 'C' = I
-
 C = eye(2);
 
-
-
 % No 'D' feedforward matrix (yet?)
-
 D = 0;
 
-
-
-states = {'lateral_velocity','yaw_rate'};
-
-inputs = {'delta_torque','steer_angle_o'};
-
+states = {'Lateral Velocity','Yaw Rate'};
+inputs = {'Delta Torque','Steer Angle'};
 outputs = states;
 
 
-
 theModel = ss(A,B,C,D,'StateName', states, 'InputName', inputs, 'OutputName', outputs);
-
-
 
 end
